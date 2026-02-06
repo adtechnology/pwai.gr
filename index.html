@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>pwai.gr — Coming Soon</title>
+  <meta name="description" content="pwai.gr — AI consultancy for growth. Website coming soon." />
+
+  <style>
+    :root{
+      --bg1:#071826;
+      --bg2:#0b2a3a;
+      --card: rgba(255,255,255,.06);
+      --card2: rgba(255,255,255,.10);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.70);
+      --shadow: 0 24px 80px rgba(0,0,0,.45);
+      --radius: 22px;
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color: var(--text);
+      background:
+        radial-gradient(900px 600px at 20% 20%, rgba(58,173,255,.22), transparent 60%),
+        radial-gradient(900px 600px at 80% 30%, rgba(0,255,204,.10), transparent 60%),
+        linear-gradient(180deg, var(--bg1), var(--bg2));
+      overflow:hidden;
+    }
+
+    /* subtle moving noise overlay */
+    body::before{
+      content:"";
+      position:fixed; inset:0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='320' height='320' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E");
+      mix-blend-mode: overlay;
+      opacity:.12;
+      pointer-events:none;
+      animation: drift 10s linear infinite;
+    }
+    @keyframes drift{
+      from{ transform: translate3d(0,0,0); }
+      to{ transform: translate3d(-40px, 30px, 0); }
+    }
+
+    .wrap{
+      min-height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding: 28px 18px;
+    }
+
+    .card{
+      width:min(860px, 92vw);
+      background: linear-gradient(180deg, var(--card), transparent);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: clamp(20px, 4vw, 42px);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      position:relative;
+      overflow:hidden;
+    }
+
+    /* animated glow ring */
+    .card::after{
+      content:"";
+      position:absolute;
+      inset:-180px;
+      background: conic-gradient(from 140deg,
+        rgba(58,173,255,.0),
+        rgba(58,173,255,.45),
+        rgba(0,255,204,.25),
+        rgba(58,173,255,.0));
+      filter: blur(24px);
+      opacity:.38;
+      animation: spin 10s linear infinite;
+      pointer-events:none;
+    }
+    @keyframes spin{
+      to { transform: rotate(360deg); }
+    }
+
+    .content{
+      position:relative; /* keep above glow */
+      z-index:1;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap: 18px;
+      text-align:center;
+      opacity:0;
+      transform: translateY(14px);
+      animation: enter 900ms cubic-bezier(.2,.8,.2,1) 120ms forwards;
+    }
+    @keyframes enter{
+      to { opacity:1; transform: translateY(0); }
+    }
+
+    .logo{
+      width: min(560px, 82vw);
+      max-width: 560px;
+      height: auto;
+      display:block;
+      border-radius: 14px;
+      box-shadow: 0 10px 40px rgba(0,0,0,.25);
+      background: rgba(255,255,255,.02);
+    }
+
+    .title{
+      font-size: clamp(18px, 2.2vw, 22px);
+      letter-spacing:.2px;
+      margin: 6px 0 0;
+    }
+
+    .subtitle{
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(14px, 1.8vw, 16px);
+      line-height: 1.5;
+      max-width: 56ch;
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.14);
+      color: rgba(255,255,255,.88);
+      font-size: 14px;
+      margin-top: 6px;
+    }
+
+    .dot{
+      width:10px; height:10px;
+      border-radius:50%;
+      background: rgba(0,255,204,.9);
+      box-shadow: 0 0 18px rgba(0,255,204,.6);
+      animation: pulse 1.6s ease-in-out infinite;
+    }
+    @keyframes pulse{
+      0%,100%{ transform: scale(1); opacity:.75; }
+      50%{ transform: scale(1.35); opacity:1; }
+    }
+
+    .footer{
+      margin-top: 10px;
+      color: rgba(255,255,255,.55);
+      font-size: 12px;
+    }
+
+    /* Respect reduced motion */
+    @media (prefers-reduced-motion: reduce){
+      body::before, .card::after, .dot { animation: none !important; }
+      .content { animation: none !important; opacity:1; transform:none; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+    <section class="card" aria-label="Coming soon">
+      <div class="content">
+        <!-- your uploaded image in the same folder -->
+        <img
+          class="logo"
+          src="90210DC6-1964-4DE3-9D3F-BD4A961CE995.jpeg"
+          alt="pwai.gr logo"
+          loading="eager"
+        />
+
+        <h1 class="title">Website coming soon</h1>
+        <p class="subtitle">
+          We’re building something clean, fast, and focused on AI consultancy for growth.
+          In the meantime, you can reach us via email.
+        </p>
+
+        <div class="pill" role="status" aria-live="polite">
+          <span class="dot" aria-hidden="true"></span>
+          <span>contact@pwai.gr</span>
+        </div>
+
+        <div class="footer">© <span id="y"></span> pwai.gr</div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
