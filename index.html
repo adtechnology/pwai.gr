@@ -1,335 +1,911 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="el">
-
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>pwai.gr — Coming Soon</title>
-  <meta name="description"
-    content="We are currently building our new website. Contact us for inquiries or collaborations.">
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://pwai.gr/">
-  <meta property="og:title" content="pwai.gr — Coming Soon">
-  <meta property="og:description"
-    content="We are currently building our new website. Contact us for inquiries or collaborations.">
-  <meta property="og:image" content="https://pwai.gr/pwai.png">
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://pwai.gr/">
-  <meta property="twitter:title" content="pwai.gr — Coming Soon">
-  <meta property="twitter:description"
-    content="We are currently building our new website. Contact us for inquiries or collaborations.">
-  <meta property="twitter:image" content="https://pwai.gr/pwai.png">
-
-  <!-- Favicons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
-  <link rel="apple-touch-icon" href="favicon-192x192.png">
-
-  <!-- Preload font for better performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --bg: #ffffff;
-      --text: #0f172a;
-      --muted: #64748b;
-      --accent: #2563eb;
-      --border: #e2e8f0;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>AI για Δικηγόρους & Επιχειρήσεις | PWAI.gr</title>
+    <meta name="description" content="Στρατηγική υλοποίηση AI για δικηγορικά γραφεία και επιχειρήσεις στην Ελλάδα. EU AI Act συμμόρφωση, αυτοματοποίηση, consulting.">
+    <meta name="keywords" content="AI για δικηγόρους, τεχνητή νοημοσύνη δικηγορικό γραφείο, AI consulting Ελλάδα, AI αυτοματοποίηση επιχειρήσεων, EU AI Act δικηγόροι">
+    <meta name="author" content="PWAI.gr">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Greek">
+    <meta name="geo.region" content="GR">
+    <meta name="geo.placename" content="Greece">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://pwai.gr/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pwai.gr/">
+    <meta property="og:title" content="AI για Δικηγόρους & Επιχειρήσεις | PWAI.gr">
+    <meta property="og:description" content="Στρατηγική υλοποίηση AI για δικηγορικά γραφεία και επιχειρήσεις στην Ελλάδα. EU AI Act συμμόρφωση, αυτοματοποίηση, consulting.">
+    <meta property="og:image" content="https://pwai.gr/og-image.jpg">
+    <meta property="og:locale" content="el_GR">
+    <meta property="og:site_name" content="PWAI.gr">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://pwai.gr/">
+    <meta name="twitter:title" content="AI για Δικηγόρους & Επιχειρήσεις | PWAI.gr">
+    <meta name="twitter:description" content="Στρατηγική υλοποίηση AI για δικηγορικά γραφεία και επιχειρήσεις στην Ελλάδα. EU AI Act συμμόρφωση.">
+    <meta name="twitter:image" content="https://pwai.gr/og-image.jpg">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="pwai.mp4" as="video" type="video/mp4">
+    <link rel="preload" href="pwai.svg" as="image" type="image/svg+xml">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="pwai.svg">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "PWAI.gr",
+        "alternateName": "Power With AI",
+        "url": "https://pwai.gr",
+        "logo": "https://pwai.gr/pwai.svg",
+        "description": "Στρατηγική υλοποίηση τεχνητής νοημοσύνης για δικηγορικά γραφεία και επιχειρήσεις στην Ελλάδα",
+        "email": "afroditi@pwai.gr",
+        "areaServed": {
+            "@type": "Country",
+            "name": "Greece"
+        },
+        "knowsAbout": [
+            "Artificial Intelligence",
+            "Legal Technology",
+            "EU AI Act Compliance",
+            "Business Automation",
+            "AI Consulting"
+        ]
     }
-
-    * {
-      box-sizing: border-box;
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "PWAI.gr - AI Consulting",
+        "description": "Υπηρεσίες AI consulting και υλοποίησης για δικηγορικά γραφεία και επιχειρήσεις στην Ελλάδα",
+        "url": "https://pwai.gr",
+        "email": "afroditi@pwai.gr",
+        "areaServed": {
+            "@type": "Country",
+            "name": "Greece"
+        },
+        "serviceType": [
+            "AI Consulting",
+            "Legal AI Implementation",
+            "EU AI Act Compliance",
+            "Business Process Automation",
+            "AI Strategy Development"
+        ],
+        "priceRange": "€€€"
     }
-
-    html,
-    body {
-      height: 100%;
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Πώς μπορεί η τεχνητή νοημοσύνη να βοηθήσει ένα δικηγορικό γραφείο;",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Η AI μπορεί να αυτοματοποιήσει τη νομική έρευνα, τη σύνταξη εγγράφων, την ανάλυση συμβολαίων και τη διαχείριση υποθέσεων. Εξοικονομεί χρόνο, μειώνει τα λάθη και επιτρέπει στους δικηγόρους να επικεντρωθούν σε στρατηγικές εργασίες υψηλής αξίας."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Τι είναι το EU AI Act και πώς επηρεάζει τις ελληνικές επιχειρήσεις;",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Το EU AI Act είναι ο νέος ευρωπαϊκός κανονισμός για την τεχνητή νοημοσύνη. Θέτει κανόνες για την ανάπτυξη και χρήση AI συστημάτων, με ιδιαίτερη έμφαση στα συστήματα υψηλού κινδύνου. Οι ελληνικές επιχειρήσεις πρέπει να προετοιμαστούν για συμμόρφωση."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Ποιες υπηρεσίες AI consulting προσφέρει η PWAI;",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Η PWAI προσφέρει στρατηγική υλοποίηση AI, αυτοματοποίηση επιχειρηματικών διαδικασιών, συμμόρφωση με το EU AI Act, εκπαίδευση προσωπικού και ανάπτυξη custom AI λύσεων για δικηγορικά γραφεία και επιχειρήσεις."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Είναι ασφαλής η χρήση AI σε δικηγορικά γραφεία;",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ναι, με τη σωστή υλοποίηση. Η PWAI εξασφαλίζει ότι όλες οι AI λύσεις συμμορφώνονται με τον GDPR, το επαγγελματικό απόρρητο και τις απαιτήσεις ασφαλείας δεδομένων που απαιτούνται για νομικές υπηρεσίες."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Πόσο κοστίζει η υλοποίηση AI σε μια επιχείρηση;",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Το κόστος εξαρτάται από το μέγεθος της επιχείρησης και τις ανάγκες. Η PWAI προσφέρει εξατομικευμένες λύσεις με μετρήσιμο ROI. Επικοινωνήστε μαζί μας για δωρεάν αξιολόγηση των αναγκών σας."
+                }
+            }
+        ]
     }
+    </script>
+    
+    <style>
+        /* Reset & Base - Mobile First */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      /* Premium font stack: Inter first */
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
 
-    /* Subtle texture and gradient for depth */
-    body::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
-      pointer-events: none;
-      z-index: -1;
-    }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background: #0a0a0a;
+            color: #ffffff;
+            line-height: 1.6;
+        }
 
-    body::after {
-      content: '';
-      position: absolute;
-      width: 120%;
-      height: 120%;
-      background: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.04), transparent 60%);
-      pointer-events: none;
-      z-index: -2;
-    }
+        /* Hero Section - Full Viewport */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            height: 100dvh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
 
-    /* Language switch - Minimalist floating */
-    .lang-switch {
-      position: fixed;
-      top: 24px;
-      right: 24px;
-      background: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      border: 1px solid rgba(15, 23, 42, 0.08);
-      padding: 8px 16px;
-      border-radius: 99px;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      color: var(--muted);
-      cursor: pointer;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      z-index: 10;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.01), 0 2px 4px -1px rgba(0, 0, 0, 0.01);
-    }
+        /* Video Background - GPU accelerated */
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            transform: translateZ(0);
+            will-change: transform;
+        }
 
-    .lang-switch:hover {
-      background: rgba(255, 255, 255, 1);
-      color: var(--text);
-      border-color: rgba(15, 23, 42, 0.15);
-      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
-      transform: translateY(-1px);
-    }
+        .video-background video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: translateZ(0);
+            backface-visibility: hidden;
+        }
 
-    .wrap {
-      width: 100%;
-      max-width: 900px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 40px 24px;
-      position: relative;
-    }
+        /* Dark Overlay with Blur */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.55);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            z-index: -1;
+        }
 
-    .content {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 32px;
+        /* Header with Logo */
+        header {
+            position: relative;
+            width: 100%;
+            padding: 1.5rem;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            z-index: 10;
+        }
 
-      /* Staggered entry animation */
-      animation: fadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-      opacity: 0;
-      transform: translateY(20px);
-    }
+        .logo {
+            width: clamp(150px, 35vw, 350px);
+            height: auto;
+            opacity: 0.95;
+            transition: opacity 0.3s ease;
+        }
 
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+        .logo:hover {
+            opacity: 1;
+        }
 
-    .logo {
-      width: 100%;
-      max-width: 500px;
-      height: auto;
-      object-fit: contain;
-      /* Subtle drop shadow for the logo itself to pop from white bg */
-      filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.06));
-      margin-bottom: 16px;
-    }
+        /* Hero Content */
+        .hero-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 1.5rem;
+            text-align: center;
+            z-index: 10;
+        }
 
-    .text-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 16px;
-      max-width: 600px;
-    }
+        .hero-inner {
+            max-width: 800px;
+            width: 100%;
+        }
 
-    h1 {
-      margin: 0;
-      font-size: clamp(32px, 5vw, 48px);
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      line-height: 1.1;
-      background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+        h1 {
+            font-size: clamp(1.75rem, 5vw, 3.5rem);
+            font-weight: 600;
+            color: #ffffff;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+        }
 
-    p {
-      margin: 0;
-      color: var(--muted);
-      font-size: clamp(17px, 2vw, 19px);
-      line-height: 1.7;
-      font-weight: 400;
-    }
+        .hero-subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.35rem);
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            letter-spacing: 0.01em;
+        }
 
-    .email-container {
-      margin-top: 16px;
-    }
+        /* CTA Button */
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.875rem 1.75rem;
+            font-family: inherit;
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            font-weight: 500;
+            color: #ffffff;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
 
-    .email {
-      display: inline-flex;
-      align-items: center;
-      padding: 14px 28px;
-      border-radius: 16px;
-      background: #f8fafc;
-      color: var(--text);
-      font-weight: 500;
-      font-size: 16px;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-      border: 1px solid rgba(15, 23, 42, 0.04);
-    }
+        .cta-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
 
-    .email::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      border-radius: 16px;
-      padding: 1px;
-      background: linear-gradient(145deg, rgba(0, 0, 0, 0.05), transparent);
-      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-      pointer-events: none;
-    }
+        .cta-btn:active {
+            transform: translateY(0);
+        }
 
-    .email:hover {
-      background: #fff;
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.01);
-      transform: translateY(-2px);
-      border-color: rgba(15, 23, 42, 0.08);
-    }
+        .cta-btn svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
 
-    .footer {
-      position: absolute;
-      bottom: 24px;
-      font-size: 13px;
-      color: var(--muted);
-      font-weight: 500;
-      opacity: 0.6;
-    }
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            animation: bounce 2s infinite;
+            z-index: 10;
+        }
 
-    /* Make footer static on small screens if content is tall */
-    @media (max-height: 800px) {
-      .footer {
-        position: relative;
-        margin-top: 64px;
-        bottom: auto;
-      }
-    }
+        .scroll-indicator svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
 
-    @media (prefers-reduced-motion: reduce) {
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
 
-      .content,
-      .lang-switch,
-      .email {
-        animation: none;
-        opacity: 1;
-        transform: none;
-        transition: none;
-      }
-    }
-  </style>
+        /* Sound Toggle Button */
+        .sound-toggle {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 48px;
+            height: 48px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+
+        .sound-toggle:hover {
+            background: rgba(0, 0, 0, 0.6);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: scale(1.05);
+        }
+
+        .sound-toggle svg {
+            width: 22px;
+            height: 22px;
+            fill: rgba(255, 255, 255, 0.9);
+        }
+
+        .sound-toggle .icon-unmute { display: block; }
+        .sound-toggle .icon-mute { display: none; }
+        .sound-toggle.unmuted .icon-unmute { display: none; }
+        .sound-toggle.unmuted .icon-mute { display: block; }
+
+        /* Main Content - SEO Sections */
+        main {
+            background: linear-gradient(180deg, #0a0a0a 0%, #111111 100%);
+        }
+
+        /* Section Base Styles */
+        .seo-section {
+            padding: 4rem 1.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .seo-section h2 {
+            font-size: clamp(1.5rem, 4vw, 2.25rem);
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.01em;
+            line-height: 1.3;
+        }
+
+        .seo-section h3 {
+            font-size: clamp(1.1rem, 3vw, 1.5rem);
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.95);
+            margin: 2rem 0 1rem;
+            line-height: 1.4;
+        }
+
+        .seo-section p {
+            font-size: clamp(0.95rem, 2vw, 1.1rem);
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.8;
+            margin-bottom: 1.25rem;
+        }
+
+        .seo-section ul {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .seo-section li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: rgba(255, 255, 255, 0.75);
+            font-size: clamp(0.95rem, 2vw, 1.05rem);
+            line-height: 1.6;
+        }
+
+        .seo-section li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.6em;
+            width: 6px;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 50%;
+        }
+
+        /* Section Divider */
+        .section-divider {
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, rgba(255,255,255,0.3), rgba(255,255,255,0.1));
+            margin: 0 0 2rem;
+        }
+
+        /* Anchor Links */
+        .anchor-link {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: color 0.2s ease;
+        }
+
+        .anchor-link:hover {
+            color: #ffffff;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1.5rem 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-size: clamp(1rem, 2.5vw, 1.15rem);
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 0.75rem;
+            line-height: 1.5;
+        }
+
+        .faq-answer {
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        footer {
+            background: #050505;
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            width: 120px;
+            height: auto;
+            margin-bottom: 1.5rem;
+            opacity: 0.8;
+        }
+
+        .footer-text {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 1rem;
+        }
+
+        .footer-email {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-email:hover {
+            color: #ffffff;
+        }
+
+        .footer-copyright {
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Internal Navigation */
+        .internal-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            padding: 2rem 1.5rem;
+            background: rgba(255, 255, 255, 0.02);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .internal-nav a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.2s ease;
+        }
+
+        .internal-nav a:hover {
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Responsive Adjustments */
+        @media (min-width: 768px) {
+            header {
+                padding: 2rem 2.5rem;
+            }
+
+            .hero-content {
+                padding: 0 2rem;
+            }
+
+            .seo-section {
+                padding: 5rem 2rem;
+            }
+
+            footer {
+                padding: 4rem 2rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .seo-section {
+                padding: 6rem 2rem;
+            }
+        }
+
+        /* Landscape Mobile */
+        @media (max-height: 500px) and (orientation: landscape) {
+            header {
+                padding: 1rem 1.5rem;
+            }
+
+            .logo {
+                width: 120px;
+            }
+
+            h1 {
+                font-size: clamp(1.25rem, 4vw, 2rem);
+                margin-bottom: 0.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: clamp(0.85rem, 2vw, 1rem);
+                margin-bottom: 0.75rem;
+            }
+
+            .scroll-indicator {
+                display: none;
+            }
+        }
+
+        /* High DPI Screens */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            h1, .hero-subtitle, .seo-section p {
+                text-rendering: optimizeLegibility;
+            }
+        }
+
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+            
+            .scroll-indicator {
+                animation: none;
+            }
+            
+            .cta-btn, .sound-toggle, .logo {
+                transition: none;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            .hero {
+                height: auto;
+                min-height: 0;
+            }
+            
+            .video-background,
+            .overlay,
+            .sound-toggle,
+            .scroll-indicator {
+                display: none;
+            }
+            
+            body {
+                background: white;
+                color: black;
+            }
+            
+            .seo-section p,
+            .seo-section li,
+            .faq-answer {
+                color: #333;
+            }
+        }
+    </style>
 </head>
-
 <body>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <!-- Video Background -->
+        <div class="video-background">
+            <video
+                id="bgVideo"
+                autoplay
+                muted
+                loop
+                playsinline
+                disablePictureInPicture
+                preload="auto"
+                fetchpriority="high">
+                <source src="pwai.mp4" type="video/mp4">
+            </video>
+        </div>
 
-  <!-- Language Button -->
-  <button class="lang-switch" onclick="toggleLang()">EN</button>
+        <!-- Dark Overlay -->
+        <div class="overlay"></div>
 
-  <main class="wrap">
-    <div class="content">
-      <img class="logo" src="pwai.webp" alt="pwai.gr logo" width="500" height="300" />
+        <!-- Header with Logo -->
+        <header>
+            <a href="#hero" aria-label="PWAI - Αρχική">
+                <img src="pwai.svg" alt="PWAI Logo - AI Consulting για Δικηγόρους και Επιχειρήσεις στην Ελλάδα" class="logo" width="350" height="100">
+            </a>
+        </header>
 
-      <div class="text-container">
-        <h1 id="title">Σύντομα κοντά σας</h1>
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <div class="hero-inner">
+                <h1>Στρατηγική Υιοθέτηση AI: Από τη Θεωρία στην Πράξη</h1>
+                <p class="hero-subtitle">Υπηρετούμε τη μετάβαση στη νέα ψηφιακή πραγματικότητα με σεβασμό στις αρχές του νομικού λειτουργήματος.</p>
+                <a href="mailto:afroditi@pwai.gr" class="cta-btn">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                    afroditi@pwai.gr
+                </a>
+            </div>
+        </div>
 
-        <p id="text">
-          Δημιουργούμε αυτή τη στιγμή τη νέα μας ιστοσελίδα.
-          Για οποιαδήποτε πληροφορία ή συνεργασία, μπορείτε να επικοινωνήσετε μαζί μας μέσω email.
-        </p>
-      </div>
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator" aria-hidden="true">
+            <span>Μάθετε περισσότερα</span>
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+            </svg>
+        </div>
 
-      <div class="email-container">
-        <a href="mailto:contact@pwai.gr" class="email">contact@pwai.gr</a>
-      </div>
-    </div>
+        <!-- Sound Toggle Button -->
+        <button class="sound-toggle" id="soundToggle" aria-label="Ενεργοποίηση ήχου">
+            <svg class="icon-unmute" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
+            </svg>
+            <svg class="icon-mute" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+            </svg>
+        </button>
+    </section>
 
-    <div class="footer">© <span id="year"></span> pwai.gr</div>
-  </main>
+    <!-- Internal Navigation -->
+    <nav class="internal-nav" aria-label="Πλοήγηση σελίδας">
+        <a href="#ai-dikigorous">AI για Δικηγόρους</a>
+        <a href="#eu-ai-act">EU AI Act</a>
+        <a href="#ypiresies">Υπηρεσίες</a>
+        <a href="#faq">Συχνές Ερωτήσεις</a>
+    </nav>
 
-  <script>
-    const gr = {
-      title: "Σύντομα κοντά σας",
-      text:
-        "Δημιουργούμε αυτή τη στιγμή τη νέα μας ιστοσελίδα. Για οποιαδήποτε πληροφορία ή συνεργασία, μπορείτε να επικοινωνήσετε μαζί μας μέσω email."
-    };
+    <!-- Main Content - SEO Sections -->
+    <main>
+        <!-- Section 1: AI για Δικηγόρους στην Ελλάδα -->
+        <section class="seo-section" id="ai-dikigorous">
+            <div class="section-divider"></div>
+            <h2>AI για Δικηγόρους στην Ελλάδα: Ο Μετασχηματισμός του Νομικού Κλάδου</h2>
+            
+            <p>Η τεχνητή νοημοσύνη αλλάζει ριζικά τον τρόπο λειτουργίας των δικηγορικών γραφείων παγκοσμίως, και η Ελλάδα δεν αποτελεί εξαίρεση. Τα σύγχρονα εργαλεία AI επιτρέπουν στους δικηγόρους να αυτοματοποιήσουν χρονοβόρες διαδικασίες, να βελτιώσουν την ακρίβεια της έρευνάς τους και να προσφέρουν καλύτερες υπηρεσίες στους πελάτες τους.</p>
 
-    const en = {
-      title: "Coming soon",
-      text:
-        "We are currently building our new website. In the meantime, feel free to contact us via email for any inquiries or collaborations."
-    };
+            <h3>Αυτοματοποίηση Νομικής Έρευνας</h3>
+            <p>Η νομική έρευνα αποτελεί θεμελιώδη δραστηριότητα κάθε δικηγορικού γραφείου. Με τη χρήση AI, η αναζήτηση νομολογίας, νομοθεσίας και νομικών άρθρων γίνεται σε κλάσματα του χρόνου που απαιτούσε παραδοσιακά. Τα συστήματα τεχνητής νοημοσύνης μπορούν να αναλύσουν χιλιάδες έγγραφα και να εντοπίσουν τις πιο σχετικές πληροφορίες για κάθε υπόθεση.</p>
 
-    let currentLang = "gr";
+            <h3>Σύνταξη Νομικών Εγγράφων</h3>
+            <p>Η AI μπορεί να βοηθήσει στη σύνταξη συμβολαίων, δικογράφων και άλλων νομικών εγγράφων. Χρησιμοποιώντας προηγμένα γλωσσικά μοντέλα, τα εργαλεία AI δημιουργούν προσχέδια που οι δικηγόροι μπορούν να επεξεργαστούν και να προσαρμόσουν, εξοικονομώντας πολύτιμο χρόνο.</p>
 
-    function toggleLang() {
-      currentLang = currentLang === "gr" ? "en" : "gr";
+            <h3>Ανάλυση Συμβολαίων και Due Diligence</h3>
+            <p>Η ανάλυση συμβολαίων με AI επιτρέπει τον εντοπισμό κινδύνων, ασυνεπειών και προβληματικών όρων σε ελάχιστο χρόνο. Αυτό είναι ιδιαίτερα χρήσιμο σε διαδικασίες due diligence, όπου πρέπει να εξεταστούν μεγάλοι όγκοι εγγράφων.</p>
 
-      const titleEl = document.getElementById("title");
-      const textEl = document.getElementById("text");
-      const btnEl = document.querySelector(".lang-switch");
+            <h3>Συμμόρφωση και Κανονιστικό Πλαίσιο</h3>
+            <p>Τα δικηγορικά γραφεία που υιοθετούν AI πρέπει να διασφαλίζουν τη συμμόρφωση με τον GDPR, το επαγγελματικό απόρρητο και τις δεοντολογικές υποχρεώσεις του κλάδου. Η <a href="#ypiresies" class="anchor-link">PWAI</a> εξειδικεύεται στην υλοποίηση λύσεων που σέβονται αυτές τις απαιτήσεις.</p>
+        </section>
 
-      // Text transition
-      titleEl.style.opacity = 0;
-      textEl.style.opacity = 0;
-      titleEl.style.transform = "translateY(5px)";
-      textEl.style.transform = "translateY(5px)";
+        <!-- Section 2: EU AI Act Συμμόρφωση -->
+        <section class="seo-section" id="eu-ai-act">
+            <div class="section-divider"></div>
+            <h2>Συμμόρφωση με το EU AI Act: Προετοιμάστε την Επιχείρησή σας</h2>
+            
+            <p>Ο Ευρωπαϊκός Κανονισμός για την Τεχνητή Νοημοσύνη (EU AI Act) αποτελεί το πρώτο ολοκληρωμένο νομικό πλαίσιο για την AI παγκοσμίως. Οι ελληνικές επιχειρήσεις και δικηγορικά γραφεία πρέπει να προετοιμαστούν για τις νέες υποχρεώσεις που επιβάλλει.</p>
 
-      setTimeout(() => {
-        titleEl.textContent = currentLang === "gr" ? gr.title : en.title;
-        textEl.textContent = currentLang === "gr" ? gr.text : en.text;
-        btnEl.textContent = currentLang === "gr" ? "EN" : "GR";
-        document.documentElement.lang = currentLang === "gr" ? "el" : "en";
+            <h3>Τι Προβλέπει ο Κανονισμός</h3>
+            <p>Ο EU AI Act κατηγοριοποιεί τα συστήματα AI ανάλογα με τον κίνδυνο που ενέχουν. Τα συστήματα υψηλού κινδύνου, που περιλαμβάνουν εφαρμογές στη δικαιοσύνη και τη διοίκηση, υπόκεινται σε αυστηρές απαιτήσεις διαφάνειας, ακρίβειας και ανθρώπινης επίβλεψης.</p>
 
-        titleEl.style.opacity = 1;
-        textEl.style.opacity = 1;
-        titleEl.style.transform = "translateY(0)";
-        textEl.style.transform = "translateY(0)";
-      }, 250);
+            <h3>Υποχρεώσεις για Επιχειρήσεις</h3>
+            <ul>
+                <li>Αξιολόγηση κινδύνου για κάθε σύστημα AI που χρησιμοποιείται</li>
+                <li>Τεκμηρίωση και διαφάνεια στη λειτουργία των AI συστημάτων</li>
+                <li>Διασφάλιση ανθρώπινης επίβλεψης σε κρίσιμες αποφάσεις</li>
+                <li>Τήρηση αρχείων και δυνατότητα ελέγχου</li>
+                <li>Εκπαίδευση προσωπικού στη χρήση AI</li>
+            </ul>
 
-      titleEl.style.transition = "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)";
-      textEl.style.transition = "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)";
-    }
+            <h3>Η PWAI ως Συνεργάτης Συμμόρφωσης</h3>
+            <p>Η PWAI προσφέρει εξειδικευμένες υπηρεσίες για τη συμμόρφωση με το EU AI Act. Από την αξιολόγηση των υφιστάμενων συστημάτων μέχρι την υλοποίηση νέων λύσεων που πληρούν τις απαιτήσεις του κανονισμού, είμαστε δίπλα σας σε κάθε βήμα.</p>
+        </section>
 
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+        <!-- Section 3: Υπηρεσίες AI Consulting -->
+        <section class="seo-section" id="ypiresies">
+            <div class="section-divider"></div>
+            <h2>Υπηρεσίες AI Consulting για Επιχειρήσεις</h2>
+            
+            <p>Η PWAI προσφέρει ολοκληρωμένες υπηρεσίες AI consulting, σχεδιασμένες για τις ανάγκες των ελληνικών επιχειρήσεων και δικηγορικών γραφείων. Η προσέγγισή μας είναι πρακτική και προσανατολισμένη στα αποτελέσματα.</p>
 
+            <h3>Στρατηγική AI & Αξιολόγηση</h3>
+            <ul>
+                <li>Ανάλυση επιχειρηματικών διαδικασιών και εντοπισμός ευκαιριών AI</li>
+                <li>Αξιολόγηση ετοιμότητας οργανισμού για υιοθέτηση AI</li>
+                <li>Σχεδιασμός roadmap υλοποίησης με μετρήσιμους στόχους</li>
+                <li>Ανάλυση κόστους-οφέλους και υπολογισμός ROI</li>
+            </ul>
+
+            <h3>Υλοποίηση & Ενσωμάτωση</h3>
+            <ul>
+                <li>Επιλογή και παραμετροποίηση AI εργαλείων</li>
+                <li>Ενσωμάτωση με υφιστάμενα συστήματα και workflows</li>
+                <li>Ανάπτυξη custom AI λύσεων για εξειδικευμένες ανάγκες</li>
+                <li>Δοκιμές και βελτιστοποίηση απόδοσης</li>
+            </ul>
+
+            <h3>Εκπαίδευση & Υποστήριξη</h3>
+            <ul>
+                <li>Εκπαιδευτικά προγράμματα για στελέχη και προσωπικό</li>
+                <li>Workshops πρακτικής εφαρμογής AI εργαλείων</li>
+                <li>Συνεχής τεχνική υποστήριξη και συμβουλευτική</li>
+                <li>Παρακολούθηση απόδοσης και προτάσεις βελτίωσης</li>
+            </ul>
+
+            <p>Για περισσότερες πληροφορίες σχετικά με τις υπηρεσίες μας, <a href="mailto:afroditi@pwai.gr" class="anchor-link">επικοινωνήστε μαζί μας</a>.</p>
+        </section>
+
+        <!-- Section 4: FAQ -->
+        <section class="seo-section" id="faq">
+            <div class="section-divider"></div>
+            <h2>Συχνές Ερωτήσεις για την AI σε Δικηγορικά Γραφεία και Επιχειρήσεις</h2>
+            
+            <div class="faq-item">
+                <h3 class="faq-question">Πώς μπορεί η τεχνητή νοημοσύνη να βοηθήσει ένα δικηγορικό γραφείο;</h3>
+                <p class="faq-answer">Η AI μπορεί να αυτοματοποιήσει τη νομική έρευνα, τη σύνταξη εγγράφων, την ανάλυση συμβολαίων και τη διαχείριση υποθέσεων. Εξοικονομεί χρόνο, μειώνει τα λάθη και επιτρέπει στους δικηγόρους να επικεντρωθούν σε στρατηγικές εργασίες υψηλής αξίας. Τα σύγχρονα εργαλεία AI μπορούν να αναλύσουν χιλιάδες σελίδες νομολογίας σε λεπτά, κάτι που θα απαιτούσε ώρες ή ημέρες με παραδοσιακές μεθόδους.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">Τι είναι το EU AI Act και πώς επηρεάζει τις ελληνικές επιχειρήσεις;</h3>
+                <p class="faq-answer">Το EU AI Act είναι ο νέος ευρωπαϊκός κανονισμός για την τεχνητή νοημοσύνη που τέθηκε σε ισχύ το 2024. Θέτει κανόνες για την ανάπτυξη και χρήση AI συστημάτων, με ιδιαίτερη έμφαση στα συστήματα υψηλού κινδύνου. Οι ελληνικές επιχειρήσεις που χρησιμοποιούν ή αναπτύσσουν AI πρέπει να προετοιμαστούν για συμμόρφωση με τις νέες απαιτήσεις διαφάνειας, ασφάλειας και ανθρώπινης επίβλεψης.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">Ποιες υπηρεσίες AI consulting προσφέρει η PWAI;</h3>
+                <p class="faq-answer">Η PWAI προσφέρει στρατηγική υλοποίηση AI, αυτοματοποίηση επιχειρηματικών διαδικασιών, συμμόρφωση με το EU AI Act, εκπαίδευση προσωπικού και ανάπτυξη custom AI λύσεων. Εξειδικευόμαστε σε δικηγορικά γραφεία και επιχειρήσεις που θέλουν να αξιοποιήσουν την AI με υπεύθυνο και αποτελεσματικό τρόπο.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">Είναι ασφαλής η χρήση AI σε δικηγορικά γραφεία;</h3>
+                <p class="faq-answer">Ναι, με τη σωστή υλοποίηση. Η PWAI εξασφαλίζει ότι όλες οι AI λύσεις συμμορφώνονται με τον GDPR, το επαγγελματικό απόρρητο και τις απαιτήσεις ασφαλείας δεδομένων που απαιτούνται για νομικές υπηρεσίες. Χρησιμοποιούμε τεχνολογίες κρυπτογράφησης, ελέγχου πρόσβασης και audit trails για τη μέγιστη προστασία των ευαίσθητων δεδομένων.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">Πόσο κοστίζει η υλοποίηση AI σε μια επιχείρηση;</h3>
+                <p class="faq-answer">Το κόστος εξαρτάται από το μέγεθος της επιχείρησης, τις συγκεκριμένες ανάγκες και το εύρος της υλοποίησης. Η PWAI προσφέρει εξατομικευμένες λύσεις με μετρήσιμο ROI. Ξεκινάμε με μια δωρεάν αξιολόγηση των αναγκών σας και παρουσιάζουμε αναλυτική πρόταση με κόστος και αναμενόμενα οφέλη. Επικοινωνήστε μαζί μας στο <a href="mailto:afroditi@pwai.gr" class="anchor-link">afroditi@pwai.gr</a>.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <img src="pwai.svg" alt="PWAI Logo" class="footer-logo" width="120" height="34" loading="lazy">
+            <p class="footer-text">Στρατηγική Υλοποίηση Τεχνητής Νοημοσύνης<br>για Δικηγόρους και Επιχειρήσεις στην Ελλάδα</p>
+            <a href="mailto:afroditi@pwai.gr" class="footer-email">afroditi@pwai.gr</a>
+            <p class="footer-copyright">© 2024 PWAI.gr - Με επιφύλαξη παντός δικαιώματος | <a href="privacy.html" style="color: inherit; text-decoration: underline;">Πολιτική Απορρήτου</a></p>
+        </div>
+    </footer>
+
+    <!-- Non-blocking JavaScript -->
+    <script>
+        // Performance optimizations and video handling
+        (function() {
+            'use strict';
+            
+            const video = document.getElementById('bgVideo');
+            const soundToggle = document.getElementById('soundToggle');
+            
+            // Optimize video playback
+            if (video) {
+                // Reduce video quality on slow connections
+                if ('connection' in navigator) {
+                    const connection = navigator.connection;
+                    if (connection.saveData || connection.effectiveType === '2g' || connection.effectiveType === 'slow-2g') {
+                        video.playbackRate = 0.5;
+                    }
+                }
+                
+                // Pause video when tab is not visible (saves resources)
+                document.addEventListener('visibilitychange', function() {
+                    if (document.hidden) {
+                        video.pause();
+                    } else {
+                        video.play().catch(function() {});
+                    }
+                });
+                
+                // Ensure video plays on mobile after user interaction
+                document.addEventListener('touchstart', function playOnTouch() {
+                    video.play().catch(function() {});
+                    document.removeEventListener('touchstart', playOnTouch);
+                }, { once: true, passive: true });
+            }
+            
+            // Sound Toggle Functionality
+            if (soundToggle && video) {
+                soundToggle.addEventListener('click', function() {
+                    video.muted = !video.muted;
+                    soundToggle.classList.toggle('unmuted', !video.muted);
+                    soundToggle.setAttribute('aria-label', video.muted ? 'Ενεργοποίηση ήχου' : 'Απενεργοποίηση ήχου');
+                });
+            }
+
+            // Smooth scroll for internal links
+            document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+                anchor.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Lazy load images below the fold
+            if ('IntersectionObserver' in window) {
+                const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+                const imageObserver = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            img.src = img.dataset.src || img.src;
+                            imageObserver.unobserve(img);
+                        }
+                    });
+                });
+
+                lazyImages.forEach(function(img) {
+                    imageObserver.observe(img);
+                });
+            }
+        })();
+    </script>
 </body>
-
 </html>

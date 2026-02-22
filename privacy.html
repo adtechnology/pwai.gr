@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    
+    <!-- SEO Meta Tags -->
+    <title>Πολιτική Απορρήτου | PWAI.gr</title>
+    <meta name="description" content="Πολιτική Απορρήτου της PWAI.gr - Προστασία προσωπικών δεδομένων σύμφωνα με τον GDPR.">
+    <meta name="robots" content="noindex, follow">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://pwai.gr/privacy.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="pwai.svg">
+    
+    <style>
+        /* Reset & Base */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background: #0a0a0a;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            padding: 2rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            width: 120px;
+            height: auto;
+            opacity: 0.95;
+            transition: opacity 0.3s ease;
+        }
+
+        .logo:hover {
+            opacity: 1;
+        }
+
+        .back-link {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            transition: all 0.2s ease;
+        }
+
+        .back-link:hover {
+            color: #ffffff;
+            border-color: rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        /* Main Content */
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 4rem;
+        }
+
+        h1 {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .last-updated {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: clamp(1.25rem, 3vw, 1.5rem);
+            font-weight: 600;
+            color: #ffffff;
+            margin: 2.5rem 0 1rem;
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            font-size: clamp(1.1rem, 2.5vw, 1.25rem);
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.95);
+            margin: 2rem 0 0.75rem;
+        }
+
+        p {
+            font-size: clamp(0.95rem, 2vw, 1.05rem);
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style: none;
+            margin: 1rem 0 1.5rem;
+        }
+
+        li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: rgba(255, 255, 255, 0.75);
+            font-size: clamp(0.95rem, 2vw, 1.05rem);
+            line-height: 1.6;
+        }
+
+        li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.6em;
+            width: 6px;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 50%;
+        }
+
+        a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #ffffff;
+        }
+
+        .section-divider {
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, rgba(255,255,255,0.3), rgba(255,255,255,0.1));
+            margin: 3rem 0;
+        }
+
+        /* Contact Box */
+        .contact-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .contact-box p {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        footer {
+            background: #050505;
+            padding: 2rem 1.5rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-text {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .footer-text a {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Responsive */
+        @media (min-width: 768px) {
+            header {
+                padding: 2.5rem 2rem;
+            }
+
+            main {
+                padding: 3rem 2rem 5rem;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            p, li {
+                color: #333;
+            }
+
+            .back-link {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" aria-label="PWAI - Αρχική">
+            <img src="pwai.svg" alt="PWAI Logo" class="logo" width="120" height="34">
+        </a>
+        <a href="index.html" class="back-link">← Επιστροφή</a>
+    </header>
+
+    <main>
+        <h1>Πολιτική Απορρήτου</h1>
+        <p class="last-updated">Τελευταία ενημέρωση: Φεβρουάριος 2024</p>
+
+        <p>Η PWAI.gr ("εμείς", "μας", "η εταιρεία") σέβεται την ιδιωτικότητά σας και δεσμεύεται να προστατεύει τα προσωπικά σας δεδομένα σύμφωνα με τον Γενικό Κανονισμό Προστασίας Δεδομένων (GDPR - Κανονισμός ΕΕ 2016/679) και την ελληνική νομοθεσία περί προστασίας προσωπικών δεδομένων.</p>
+
+        <div class="section-divider"></div>
+
+        <h2>1. Υπεύθυνος Επεξεργασίας</h2>
+        <p>Υπεύθυνος επεξεργασίας των προσωπικών σας δεδομένων είναι η PWAI.gr.</p>
+        
+        <div class="contact-box">
+            <p><strong>Στοιχεία Επικοινωνίας:</strong></p>
+            <p>Email: <a href="mailto:afroditi@pwai.gr">afroditi@pwai.gr</a></p>
+            <p>Ιστοσελίδα: <a href="https://pwai.gr">https://pwai.gr</a></p>
+        </div>
+
+        <h2>2. Δεδομένα που Συλλέγουμε</h2>
+        <p>Η ιστοσελίδα μας συλλέγει ελάχιστα προσωπικά δεδομένα. Συγκεκριμένα:</p>
+        
+        <h3>2.1 Επικοινωνία μέσω Email</h3>
+        <p>Όταν επικοινωνείτε μαζί μας μέσω email, συλλέγουμε:</p>
+        <ul>
+            <li>Τη διεύθυνση email σας</li>
+            <li>Το όνομά σας (εάν το παρέχετε)</li>
+            <li>Το περιεχόμενο του μηνύματός σας</li>
+            <li>Τυχόν άλλες πληροφορίες που επιλέγετε να μοιραστείτε</li>
+        </ul>
+
+        <h3>2.2 Cookies και Τεχνολογίες Παρακολούθησης</h3>
+        <p><strong>Η ιστοσελίδα μας δεν χρησιμοποιεί cookies ούτε άλλες τεχνολογίες παρακολούθησης.</strong> Δεν συλλέγουμε δεδομένα πλοήγησης, δεν χρησιμοποιούμε εργαλεία analytics και δεν παρακολουθούμε τη συμπεριφορά σας στην ιστοσελίδα.</p>
+
+        <h2>3. Σκοπός Επεξεργασίας</h2>
+        <p>Τα δεδομένα που συλλέγουμε χρησιμοποιούνται αποκλειστικά για:</p>
+        <ul>
+            <li>Να απαντήσουμε στα ερωτήματά σας</li>
+            <li>Να σας παρέχουμε πληροφορίες για τις υπηρεσίες μας</li>
+            <li>Να επικοινωνήσουμε μαζί σας σχετικά με πιθανή συνεργασία</li>
+        </ul>
+
+        <h2>4. Νομική Βάση Επεξεργασίας</h2>
+        <p>Η επεξεργασία των προσωπικών σας δεδομένων βασίζεται στις ακόλουθες νομικές βάσεις σύμφωνα με το Άρθρο 6 του GDPR:</p>
+        <ul>
+            <li><strong>Συγκατάθεση (Άρθρο 6.1.α):</strong> Όταν μας στέλνετε email, συναινείτε στην επεξεργασία των δεδομένων σας για τον σκοπό της επικοινωνίας.</li>
+            <li><strong>Έννομο συμφέρον (Άρθρο 6.1.στ):</strong> Για την απάντηση σε επαγγελματικά ερωτήματα και την ανάπτυξη επιχειρηματικών σχέσεων.</li>
+        </ul>
+
+        <h2>5. Διατήρηση Δεδομένων</h2>
+        <p>Διατηρούμε τα δεδομένα επικοινωνίας σας για όσο διάστημα είναι απαραίτητο για τους σκοπούς για τους οποίους συλλέχθηκαν, και συγκεκριμένα:</p>
+        <ul>
+            <li>Για την ολοκλήρωση της επικοινωνίας και τυχόν συνεργασίας</li>
+            <li>Για την τήρηση νομικών υποχρεώσεων</li>
+            <li>Για την υπεράσπιση νομικών αξιώσεων</li>
+        </ul>
+        <p>Μετά την πάροδο αυτού του χρονικού διαστήματος, τα δεδομένα διαγράφονται με ασφάλεια.</p>
+
+        <h2>6. Τα Δικαιώματά σας</h2>
+        <p>Σύμφωνα με τον GDPR, έχετε τα ακόλουθα δικαιώματα:</p>
+        <ul>
+            <li><strong>Δικαίωμα πρόσβασης:</strong> Να ζητήσετε αντίγραφο των προσωπικών δεδομένων που διατηρούμε για εσάς.</li>
+            <li><strong>Δικαίωμα διόρθωσης:</strong> Να ζητήσετε τη διόρθωση ανακριβών δεδομένων.</li>
+            <li><strong>Δικαίωμα διαγραφής:</strong> Να ζητήσετε τη διαγραφή των δεδομένων σας ("δικαίωμα στη λήθη").</li>
+            <li><strong>Δικαίωμα περιορισμού:</strong> Να ζητήσετε τον περιορισμό της επεξεργασίας των δεδομένων σας.</li>
+            <li><strong>Δικαίωμα φορητότητας:</strong> Να λάβετε τα δεδομένα σας σε δομημένη, κοινώς χρησιμοποιούμενη μορφή.</li>
+            <li><strong>Δικαίωμα εναντίωσης:</strong> Να αντιταχθείτε στην επεξεργασία των δεδομένων σας.</li>
+            <li><strong>Δικαίωμα ανάκλησης συγκατάθεσης:</strong> Να ανακαλέσετε τη συγκατάθεσή σας ανά πάσα στιγμή.</li>
+        </ul>
+        <p>Για να ασκήσετε οποιοδήποτε από τα παραπάνω δικαιώματα, επικοινωνήστε μαζί μας στο <a href="mailto:afroditi@pwai.gr">afroditi@pwai.gr</a>.</p>
+
+        <h2>7. Ασφάλεια Δεδομένων</h2>
+        <p>Λαμβάνουμε κατάλληλα τεχνικά και οργανωτικά μέτρα για την προστασία των προσωπικών σας δεδομένων από μη εξουσιοδοτημένη πρόσβαση, απώλεια, καταστροφή ή αλλοίωση.</p>
+
+        <h2>8. Διαβίβαση Δεδομένων</h2>
+        <p>Δεν πωλούμε, ενοικιάζουμε ή μοιραζόμαστε τα προσωπικά σας δεδομένα με τρίτους για εμπορικούς σκοπούς. Τα δεδομένα σας δεν διαβιβάζονται εκτός του Ευρωπαϊκού Οικονομικού Χώρου (ΕΟΧ).</p>
+
+        <h2>9. Δικαίωμα Καταγγελίας</h2>
+        <p>Εάν πιστεύετε ότι η επεξεργασία των προσωπικών σας δεδομένων παραβιάζει τον GDPR, έχετε το δικαίωμα να υποβάλετε καταγγελία στην Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα:</p>
+        
+        <div class="contact-box">
+            <p><strong>Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα</strong></p>
+            <p>Κηφισίας 1-3, 115 23 Αθήνα</p>
+            <p>Τηλ: +30 210 6475600</p>
+            <p>Email: <a href="mailto:contact@dpa.gr">contact@dpa.gr</a></p>
+            <p>Ιστοσελίδα: <a href="https://www.dpa.gr" target="_blank" rel="noopener">www.dpa.gr</a></p>
+        </div>
+
+        <h2>10. Αλλαγές στην Πολιτική Απορρήτου</h2>
+        <p>Διατηρούμε το δικαίωμα να τροποποιήσουμε την παρούσα Πολιτική Απορρήτου ανά πάσα στιγμή. Οποιεσδήποτε αλλαγές θα δημοσιεύονται σε αυτή τη σελίδα με ενημερωμένη ημερομηνία. Σας συνιστούμε να ελέγχετε περιοδικά αυτή τη σελίδα για τυχόν αλλαγές.</p>
+
+        <div class="section-divider"></div>
+
+        <h2>Επικοινωνία</h2>
+        <p>Για οποιαδήποτε ερώτηση σχετικά με την παρούσα Πολιτική Απορρήτου ή την επεξεργασία των προσωπικών σας δεδομένων, μπορείτε να επικοινωνήσετε μαζί μας:</p>
+        
+        <div class="contact-box">
+            <p>Email: <a href="mailto:afroditi@pwai.gr">afroditi@pwai.gr</a></p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p class="footer-text">© 2024 PWAI.gr - <a href="index.html">Αρχική</a></p>
+        </div>
+    </footer>
+</body>
+</html>
