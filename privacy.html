@@ -47,6 +47,41 @@
             margin: 0 auto;
         }
 
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        /* Language Toggle Button */
+        .lang-toggle {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            font-family: inherit;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #ffffff;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .lang-toggle:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: scale(1.05);
+        }
+
+        .lang-toggle:active {
+            transform: scale(0.98);
+        }
+
         .logo {
             width: 120px;
             height: auto;
@@ -228,105 +263,108 @@
 </head>
 <body>
     <header>
-        <a href="index.html" aria-label="PWAI - Αρχική">
-            <img src="pwai.svg" alt="PWAI Logo" class="logo" width="120" height="34">
-        </a>
-        <a href="index.html" class="back-link">← Επιστροφή</a>
+        <div class="header-left">
+            <button class="lang-toggle" id="langToggle" aria-label="Switch to English">EN</button>
+            <a href="index.html" aria-label="PWAI - Αρχική">
+                <img src="pwai.svg" alt="PWAI Logo" class="logo" width="120" height="34">
+            </a>
+        </div>
+        <a href="index.html" class="back-link" data-i18n="back">← Επιστροφή</a>
     </header>
 
     <main>
-        <h1>Πολιτική Απορρήτου</h1>
-        <p class="last-updated">Τελευταία ενημέρωση: Φεβρουάριος 2024</p>
+        <h1 data-i18n="title">Πολιτική Απορρήτου</h1>
+        <p class="last-updated" data-i18n="lastUpdated">Τελευταία ενημέρωση: Φεβρουάριος 2024</p>
 
-        <p>Η PWAI.gr ("εμείς", "μας", "η εταιρεία") σέβεται την ιδιωτικότητά σας και δεσμεύεται να προστατεύει τα προσωπικά σας δεδομένα σύμφωνα με τον Γενικό Κανονισμό Προστασίας Δεδομένων (GDPR - Κανονισμός ΕΕ 2016/679) και την ελληνική νομοθεσία περί προστασίας προσωπικών δεδομένων.</p>
+        <p data-i18n="intro">Η PWAI.gr ("εμείς", "μας", "η εταιρεία") σέβεται την ιδιωτικότητά σας και δεσμεύεται να προστατεύει τα προσωπικά σας δεδομένα σύμφωνα με τον Γενικό Κανονισμό Προστασίας Δεδομένων (GDPR - Κανονισμός ΕΕ 2016/679) και την ελληνική νομοθεσία περί προστασίας προσωπικών δεδομένων.</p>
 
         <div class="section-divider"></div>
 
-        <h2>1. Υπεύθυνος Επεξεργασίας</h2>
-        <p>Υπεύθυνος επεξεργασίας των προσωπικών σας δεδομένων είναι η PWAI.gr.</p>
+        <h2 data-i18n="s1.title">1. Υπεύθυνος Επεξεργασίας</h2>
+        <p data-i18n="s1.text">Υπεύθυνος επεξεργασίας των προσωπικών σας δεδομένων είναι η PWAI.gr.</p>
         
         <div class="contact-box">
-            <p><strong>Στοιχεία Επικοινωνίας:</strong></p>
+            <p><strong data-i18n="s1.contact">Στοιχεία Επικοινωνίας:</strong></p>
             <p>Email: <a href="mailto:afroditi@pwai.gr">afroditi@pwai.gr</a></p>
-            <p>Ιστοσελίδα: <a href="https://pwai.gr">https://pwai.gr</a></p>
+            <p><span data-i18n="s1.website">Ιστοσελίδα:</span> <a href="https://pwai.gr">https://pwai.gr</a></p>
         </div>
 
-        <h2>2. Δεδομένα που Συλλέγουμε</h2>
-        <p>Η ιστοσελίδα μας συλλέγει ελάχιστα προσωπικά δεδομένα. Συγκεκριμένα:</p>
+        <h2 data-i18n="s2.title">2. Δεδομένα που Συλλέγουμε</h2>
+        <p data-i18n="s2.text">Η ιστοσελίδα μας συλλέγει ελάχιστα προσωπικά δεδομένα. Συγκεκριμένα:</p>
         
-        <h3>2.1 Επικοινωνία μέσω Email</h3>
-        <p>Όταν επικοινωνείτε μαζί μας μέσω email, συλλέγουμε:</p>
+        <h3 data-i18n="s2.email.title">2.1 Επικοινωνία μέσω Email</h3>
+        <p data-i18n="s2.email.text">Όταν επικοινωνείτε μαζί μας μέσω email, συλλέγουμε:</p>
         <ul>
-            <li>Τη διεύθυνση email σας</li>
-            <li>Το όνομά σας (εάν το παρέχετε)</li>
-            <li>Το περιεχόμενο του μηνύματός σας</li>
-            <li>Τυχόν άλλες πληροφορίες που επιλέγετε να μοιραστείτε</li>
+            <li data-i18n="s2.email.item1">Τη διεύθυνση email σας</li>
+            <li data-i18n="s2.email.item2">Το όνομά σας (εάν το παρέχετε)</li>
+            <li data-i18n="s2.email.item3">Το περιεχόμενο του μηνύματός σας</li>
+            <li data-i18n="s2.email.item4">Τυχόν άλλες πληροφορίες που επιλέγετε να μοιραστείτε</li>
         </ul>
 
-        <h3>2.2 Cookies και Τεχνολογίες Παρακολούθησης</h3>
-        <p><strong>Η ιστοσελίδα μας δεν χρησιμοποιεί cookies ούτε άλλες τεχνολογίες παρακολούθησης.</strong> Δεν συλλέγουμε δεδομένα πλοήγησης, δεν χρησιμοποιούμε εργαλεία analytics και δεν παρακολουθούμε τη συμπεριφορά σας στην ιστοσελίδα.</p>
+        <h3 data-i18n="s2.cookies.title">2.2 Cookies και Τεχνολογίες Παρακολούθησης</h3>
+        <p data-i18n="s2.cookies.text"><strong>Η ιστοσελίδα μας δεν χρησιμοποιεί cookies ούτε άλλες τεχνολογίες παρακολούθησης.</strong> Δεν συλλέγουμε δεδομένα πλοήγησης, δεν χρησιμοποιούμε εργαλεία analytics και δεν παρακολουθούμε τη συμπεριφορά σας στην ιστοσελίδα.</p>
 
-        <h2>3. Σκοπός Επεξεργασίας</h2>
-        <p>Τα δεδομένα που συλλέγουμε χρησιμοποιούνται αποκλειστικά για:</p>
+        <h2 data-i18n="s3.title">3. Σκοπός Επεξεργασίας</h2>
+        <p data-i18n="s3.text">Τα δεδομένα που συλλέγουμε χρησιμοποιούνται αποκλειστικά για:</p>
         <ul>
-            <li>Να απαντήσουμε στα ερωτήματά σας</li>
-            <li>Να σας παρέχουμε πληροφορίες για τις υπηρεσίες μας</li>
-            <li>Να επικοινωνήσουμε μαζί σας σχετικά με πιθανή συνεργασία</li>
+            <li data-i18n="s3.item1">Να απαντήσουμε στα ερωτήματά σας</li>
+            <li data-i18n="s3.item2">Να σας παρέχουμε πληροφορίες για τις υπηρεσίες μας</li>
+            <li data-i18n="s3.item3">Να επικοινωνήσουμε μαζί σας σχετικά με πιθανή συνεργασία</li>
         </ul>
 
-        <h2>4. Νομική Βάση Επεξεργασίας</h2>
-        <p>Η επεξεργασία των προσωπικών σας δεδομένων βασίζεται στις ακόλουθες νομικές βάσεις σύμφωνα με το Άρθρο 6 του GDPR:</p>
+        <h2 data-i18n="s4.title">4. Νομική Βάση Επεξεργασίας</h2>
+        <p data-i18n="s4.text">Η επεξεργασία των προσωπικών σας δεδομένων βασίζεται στις ακόλουθες νομικές βάσεις σύμφωνα με το Άρθρο 6 του GDPR:</p>
         <ul>
-            <li><strong>Συγκατάθεση (Άρθρο 6.1.α):</strong> Όταν μας στέλνετε email, συναινείτε στην επεξεργασία των δεδομένων σας για τον σκοπό της επικοινωνίας.</li>
-            <li><strong>Έννομο συμφέρον (Άρθρο 6.1.στ):</strong> Για την απάντηση σε επαγγελματικά ερωτήματα και την ανάπτυξη επιχειρηματικών σχέσεων.</li>
+            <li data-i18n="s4.item1"><strong>Συγκατάθεση (Άρθρο 6.1.α):</strong> Όταν μας στέλνετε email, συναινείτε στην επεξεργασία των δεδομένων σας για τον σκοπό της επικοινωνίας.</li>
+            <li data-i18n="s4.item2"><strong>Έννομο συμφέρον (Άρθρο 6.1.στ):</strong> Για την απάντηση σε επαγγελματικά ερωτήματα και την ανάπτυξη επιχειρηματικών σχέσεων.</li>
         </ul>
 
-        <h2>5. Διατήρηση Δεδομένων</h2>
-        <p>Διατηρούμε τα δεδομένα επικοινωνίας σας για όσο διάστημα είναι απαραίτητο για τους σκοπούς για τους οποίους συλλέχθηκαν, και συγκεκριμένα:</p>
+        <h2 data-i18n="s5.title">5. Διατήρηση Δεδομένων</h2>
+        <p data-i18n="s5.text">Διατηρούμε τα δεδομένα επικοινωνίας σας για όσο διάστημα είναι απαραίτητο για τους σκοπούς για τους οποίους συλλέχθηκαν, και συγκεκριμένα:</p>
         <ul>
-            <li>Για την ολοκλήρωση της επικοινωνίας και τυχόν συνεργασίας</li>
-            <li>Για την τήρηση νομικών υποχρεώσεων</li>
-            <li>Για την υπεράσπιση νομικών αξιώσεων</li>
+            <li data-i18n="s5.item1">Για την ολοκλήρωση της επικοινωνίας και τυχόν συνεργασίας</li>
+            <li data-i18n="s5.item2">Για την τήρηση νομικών υποχρεώσεων</li>
+            <li data-i18n="s5.item3">Για την υπεράσπιση νομικών αξιώσεων</li>
         </ul>
-        <p>Μετά την πάροδο αυτού του χρονικού διαστήματος, τα δεδομένα διαγράφονται με ασφάλεια.</p>
+        <p data-i18n="s5.text2">Μετά την πάροδο αυτού του χρονικού διαστήματος, τα δεδομένα διαγράφονται με ασφάλεια.</p>
 
-        <h2>6. Τα Δικαιώματά σας</h2>
-        <p>Σύμφωνα με τον GDPR, έχετε τα ακόλουθα δικαιώματα:</p>
+        <h2 data-i18n="s6.title">6. Τα Δικαιώματά σας</h2>
+        <p data-i18n="s6.text">Σύμφωνα με τον GDPR, έχετε τα ακόλουθα δικαιώματα:</p>
         <ul>
-            <li><strong>Δικαίωμα πρόσβασης:</strong> Να ζητήσετε αντίγραφο των προσωπικών δεδομένων που διατηρούμε για εσάς.</li>
-            <li><strong>Δικαίωμα διόρθωσης:</strong> Να ζητήσετε τη διόρθωση ανακριβών δεδομένων.</li>
-            <li><strong>Δικαίωμα διαγραφής:</strong> Να ζητήσετε τη διαγραφή των δεδομένων σας ("δικαίωμα στη λήθη").</li>
-            <li><strong>Δικαίωμα περιορισμού:</strong> Να ζητήσετε τον περιορισμό της επεξεργασίας των δεδομένων σας.</li>
-            <li><strong>Δικαίωμα φορητότητας:</strong> Να λάβετε τα δεδομένα σας σε δομημένη, κοινώς χρησιμοποιούμενη μορφή.</li>
-            <li><strong>Δικαίωμα εναντίωσης:</strong> Να αντιταχθείτε στην επεξεργασία των δεδομένων σας.</li>
-            <li><strong>Δικαίωμα ανάκλησης συγκατάθεσης:</strong> Να ανακαλέσετε τη συγκατάθεσή σας ανά πάσα στιγμή.</li>
+            <li data-i18n="s6.item1"><strong>Δικαίωμα πρόσβασης:</strong> Να ζητήσετε αντίγραφο των προσωπικών δεδομένων που διατηρούμε για εσάς.</li>
+            <li data-i18n="s6.item2"><strong>Δικαίωμα διόρθωσης:</strong> Να ζητήσετε τη διόρθωση ανακριβών δεδομένων.</li>
+            <li data-i18n="s6.item3"><strong>Δικαίωμα διαγραφής:</strong> Να ζητήσετε τη διαγραφή των δεδομένων σας ("δικαίωμα στη λήθη").</li>
+            <li data-i18n="s6.item4"><strong>Δικαίωμα περιορισμού:</strong> Να ζητήσετε τον περιορισμό της επεξεργασίας των δεδομένων σας.</li>
+            <li data-i18n="s6.item5"><strong>Δικαίωμα φορητότητας:</strong> Να λάβετε τα δεδομένα σας σε δομημένη, κοινώς χρησιμοποιούμενη μορφή.</li>
+            <li data-i18n="s6.item6"><strong>Δικαίωμα εναντίωσης:</strong> Να αντιταχθείτε στην επεξεργασία των δεδομένων σας.</li>
+            <li data-i18n="s6.item7"><strong>Δικαίωμα ανάκλησης συγκατάθεσης:</strong> Να ανακαλέσετε τη συγκατάθεσή σας ανά πάσα στιγμή.</li>
         </ul>
-        <p>Για να ασκήσετε οποιοδήποτε από τα παραπάνω δικαιώματα, επικοινωνήστε μαζί μας στο <a href="mailto:afroditi@pwai.gr">afroditi@pwai.gr</a>.</p>
+        <p data-i18n="s6.text2">Για να ασκήσετε οποιοδήποτε από τα παραπάνω δικαιώματα, επικοινωνήστε μαζί μας στο <a href="mailto:afroditi@pwai.gr">afroditi@pwai.gr</a>.</p>
 
-        <h2>7. Ασφάλεια Δεδομένων</h2>
-        <p>Λαμβάνουμε κατάλληλα τεχνικά και οργανωτικά μέτρα για την προστασία των προσωπικών σας δεδομένων από μη εξουσιοδοτημένη πρόσβαση, απώλεια, καταστροφή ή αλλοίωση.</p>
+        <h2 data-i18n="s7.title">7. Ασφάλεια Δεδομένων</h2>
+        <p data-i18n="s7.text">Λαμβάνουμε κατάλληλα τεχνικά και οργανωτικά μέτρα για την προστασία των προσωπικών σας δεδομένων από μη εξουσιοδοτημένη πρόσβαση, απώλεια, καταστροφή ή αλλοίωση.</p>
 
-        <h2>8. Διαβίβαση Δεδομένων</h2>
-        <p>Δεν πωλούμε, ενοικιάζουμε ή μοιραζόμαστε τα προσωπικά σας δεδομένα με τρίτους για εμπορικούς σκοπούς. Τα δεδομένα σας δεν διαβιβάζονται εκτός του Ευρωπαϊκού Οικονομικού Χώρου (ΕΟΧ).</p>
+        <h2 data-i18n="s8.title">8. Διαβίβαση Δεδομένων</h2>
+        <p data-i18n="s8.text">Δεν πωλούμε, ενοικιάζουμε ή μοιραζόμαστε τα προσωπικά σας δεδομένα με τρίτους για εμπορικούς σκοπούς. Τα δεδομένα σας δεν διαβιβάζονται εκτός του Ευρωπαϊκού Οικονομικού Χώρου (ΕΟΧ).</p>
 
-        <h2>9. Δικαίωμα Καταγγελίας</h2>
-        <p>Εάν πιστεύετε ότι η επεξεργασία των προσωπικών σας δεδομένων παραβιάζει τον GDPR, έχετε το δικαίωμα να υποβάλετε καταγγελία στην Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα:</p>
+        <h2 data-i18n="s9.title">9. Δικαίωμα Καταγγελίας</h2>
+        <p data-i18n="s9.text">Εάν πιστεύετε ότι η επεξεργασία των προσωπικών σας δεδομένων παραβιάζει τον GDPR, έχετε το δικαίωμα να υποβάλετε καταγγελία στην Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα:</p>
         
         <div class="contact-box">
-            <p><strong>Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα</strong></p>
+            <p><strong data-i18n="s9.dpa">Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα</strong></p>
             <p>Κηφισίας 1-3, 115 23 Αθήνα</p>
-            <p>Τηλ: +30 210 6475600</p>
+            <p><span data-i18n="s9.phone">Τηλ:</span> +30 210 6475600</p>
             <p>Email: <a href="mailto:contact@dpa.gr">contact@dpa.gr</a></p>
-            <p>Ιστοσελίδα: <a href="https://www.dpa.gr" target="_blank" rel="noopener">www.dpa.gr</a></p>
+            <p><span data-i18n="s9.website">Ιστοσελίδα:</span> <a href="https://www.dpa.gr" target="_blank" rel="noopener">www.dpa.gr</a></p>
         </div>
 
-        <h2>10. Αλλαγές στην Πολιτική Απορρήτου</h2>
-        <p>Διατηρούμε το δικαίωμα να τροποποιήσουμε την παρούσα Πολιτική Απορρήτου ανά πάσα στιγμή. Οποιεσδήποτε αλλαγές θα δημοσιεύονται σε αυτή τη σελίδα με ενημερωμένη ημερομηνία. Σας συνιστούμε να ελέγχετε περιοδικά αυτή τη σελίδα για τυχόν αλλαγές.</p>
+        <h2 data-i18n="s10.title">10. Αλλαγές στην Πολιτική Απορρήτου</h2>
+        <p data-i18n="s10.text">Διατηρούμε το δικαίωμα να τροποποιήσουμε την παρούσα Πολιτική Απορρήτου ανά πάσα στιγμή. Οποιεσδήποτε αλλαγές θα δημοσιεύονται σε αυτή τη σελίδα με ενημερωμένη ημερομηνία. Σας συνιστούμε να ελέγχετε περιοδικά αυτή τη σελίδα για τυχόν αλλαγές.</p>
 
         <div class="section-divider"></div>
 
-        <h2>Επικοινωνία</h2>
-        <p>Για οποιαδήποτε ερώτηση σχετικά με την παρούσα Πολιτική Απορρήτου ή την επεξεργασία των προσωπικών σας δεδομένων, μπορείτε να επικοινωνήσετε μαζί μας:</p>
+        <h2 data-i18n="contact.title">Επικοινωνία</h2>
+        <p data-i18n="contact.text">Για οποιαδήποτε ερώτηση σχετικά με την παρούσα Πολιτική Απορρήτου ή την επεξεργασία των προσωπικών σας δεδομένων, μπορείτε να επικοινωνήσετε μαζί μας:</p>
         
         <div class="contact-box">
             <p>Email: <a href="mailto:afroditi@pwai.gr">afroditi@pwai.gr</a></p>
@@ -335,8 +373,135 @@
 
     <footer>
         <div class="footer-content">
-            <p class="footer-text">© 2024 PWAI.gr - <a href="index.html">Αρχική</a></p>
+            <p class="footer-text" data-i18n="footer">© 2024 PWAI.gr - <a href="index.html">Αρχική</a></p>
         </div>
     </footer>
+
+    <script>
+        // Language Toggle Functionality
+        (function() {
+            'use strict';
+            
+            const translations = {
+                en: {
+                    'back': '← Back',
+                    'title': 'Privacy Policy',
+                    'lastUpdated': 'Last updated: February 2024',
+                    'intro': 'PWAI.gr ("we", "us", "the company") respects your privacy and is committed to protecting your personal data in accordance with the General Data Protection Regulation (GDPR - EU Regulation 2016/679) and Greek data protection legislation.',
+                    's1.title': '1. Data Controller',
+                    's1.text': 'The data controller for your personal data is PWAI.gr.',
+                    's1.contact': 'Contact Details:',
+                    's1.website': 'Website:',
+                    's2.title': '2. Data We Collect',
+                    's2.text': 'Our website collects minimal personal data. Specifically:',
+                    's2.email.title': '2.1 Email Communication',
+                    's2.email.text': 'When you contact us via email, we collect:',
+                    's2.email.item1': 'Your email address',
+                    's2.email.item2': 'Your name (if provided)',
+                    's2.email.item3': 'The content of your message',
+                    's2.email.item4': 'Any other information you choose to share',
+                    's2.cookies.title': '2.2 Cookies and Tracking Technologies',
+                    's2.cookies.text': '<strong>Our website does not use cookies or other tracking technologies.</strong> We do not collect browsing data, do not use analytics tools, and do not track your behavior on the website.',
+                    's3.title': '3. Purpose of Processing',
+                    's3.text': 'The data we collect is used exclusively to:',
+                    's3.item1': 'Respond to your inquiries',
+                    's3.item2': 'Provide you with information about our services',
+                    's3.item3': 'Communicate with you regarding potential collaboration',
+                    's4.title': '4. Legal Basis for Processing',
+                    's4.text': 'The processing of your personal data is based on the following legal bases according to Article 6 of the GDPR:',
+                    's4.item1': '<strong>Consent (Article 6.1.a):</strong> When you send us an email, you consent to the processing of your data for communication purposes.',
+                    's4.item2': '<strong>Legitimate interest (Article 6.1.f):</strong> For responding to professional inquiries and developing business relationships.',
+                    's5.title': '5. Data Retention',
+                    's5.text': 'We retain your communication data for as long as necessary for the purposes for which it was collected, specifically:',
+                    's5.item1': 'For completing communication and any collaboration',
+                    's5.item2': 'For compliance with legal obligations',
+                    's5.item3': 'For defending legal claims',
+                    's5.text2': 'After this period, data is securely deleted.',
+                    's6.title': '6. Your Rights',
+                    's6.text': 'Under the GDPR, you have the following rights:',
+                    's6.item1': '<strong>Right of access:</strong> To request a copy of the personal data we hold about you.',
+                    's6.item2': '<strong>Right to rectification:</strong> To request correction of inaccurate data.',
+                    's6.item3': '<strong>Right to erasure:</strong> To request deletion of your data ("right to be forgotten").',
+                    's6.item4': '<strong>Right to restriction:</strong> To request restriction of processing of your data.',
+                    's6.item5': '<strong>Right to portability:</strong> To receive your data in a structured, commonly used format.',
+                    's6.item6': '<strong>Right to object:</strong> To object to the processing of your data.',
+                    's6.item7': '<strong>Right to withdraw consent:</strong> To withdraw your consent at any time.',
+                    's6.text2': 'To exercise any of the above rights, contact us at <a href="mailto:afroditi@pwai.gr">afroditi@pwai.gr</a>.',
+                    's7.title': '7. Data Security',
+                    's7.text': 'We take appropriate technical and organizational measures to protect your personal data from unauthorized access, loss, destruction, or alteration.',
+                    's8.title': '8. Data Transfer',
+                    's8.text': 'We do not sell, rent, or share your personal data with third parties for commercial purposes. Your data is not transferred outside the European Economic Area (EEA).',
+                    's9.title': '9. Right to Complain',
+                    's9.text': 'If you believe that the processing of your personal data violates the GDPR, you have the right to file a complaint with the Hellenic Data Protection Authority:',
+                    's9.dpa': 'Hellenic Data Protection Authority',
+                    's9.phone': 'Tel:',
+                    's9.website': 'Website:',
+                    's10.title': '10. Changes to Privacy Policy',
+                    's10.text': 'We reserve the right to modify this Privacy Policy at any time. Any changes will be posted on this page with an updated date. We recommend checking this page periodically for any changes.',
+                    'contact.title': 'Contact',
+                    'contact.text': 'For any questions regarding this Privacy Policy or the processing of your personal data, you can contact us:',
+                    'footer': '© 2024 PWAI.gr - <a href="index.html">Home</a>'
+                }
+            };
+            
+            // Store original Greek texts
+            const originalTexts = {};
+            
+            function initLanguageToggle() {
+                const langToggle = document.getElementById('langToggle');
+                if (!langToggle) return;
+                
+                // Store original texts on first load
+                document.querySelectorAll('[data-i18n]').forEach(function(el) {
+                    const key = el.getAttribute('data-i18n');
+                    originalTexts[key] = el.innerHTML;
+                });
+                
+                // Check localStorage for saved language preference
+                const savedLang = localStorage.getItem('pwai-lang');
+                if (savedLang === 'en') {
+                    applyLanguage('en');
+                    langToggle.textContent = 'EL';
+                    langToggle.setAttribute('aria-label', 'Switch to Greek');
+                    document.documentElement.lang = 'en';
+                }
+                
+                langToggle.addEventListener('click', function() {
+                    const currentLang = langToggle.textContent;
+                    if (currentLang === 'EN') {
+                        applyLanguage('en');
+                        langToggle.textContent = 'EL';
+                        langToggle.setAttribute('aria-label', 'Switch to Greek');
+                        localStorage.setItem('pwai-lang', 'en');
+                        document.documentElement.lang = 'en';
+                    } else {
+                        applyLanguage('el');
+                        langToggle.textContent = 'EN';
+                        langToggle.setAttribute('aria-label', 'Switch to English');
+                        localStorage.setItem('pwai-lang', 'el');
+                        document.documentElement.lang = 'el';
+                    }
+                });
+            }
+            
+            function applyLanguage(lang) {
+                document.querySelectorAll('[data-i18n]').forEach(function(el) {
+                    const key = el.getAttribute('data-i18n');
+                    if (lang === 'en' && translations.en[key]) {
+                        el.innerHTML = translations.en[key];
+                    } else if (lang === 'el' && originalTexts[key]) {
+                        el.innerHTML = originalTexts[key];
+                    }
+                });
+            }
+            
+            // Initialize when DOM is ready
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initLanguageToggle);
+            } else {
+                initLanguageToggle();
+            }
+        })();
+    </script>
 </body>
 </html>

@@ -209,9 +209,40 @@
             width: 100%;
             padding: 1.5rem;
             display: flex;
-            justify-content: flex-end;
+            justify-content: space-between;
             align-items: flex-start;
             z-index: 10;
+        }
+
+        /* Language Toggle Button */
+        .lang-toggle {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            font-family: inherit;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #ffffff;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .lang-toggle:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: scale(1.05);
+        }
+
+        .lang-toggle:active {
+            transform: scale(0.98);
         }
 
         .logo {
@@ -660,6 +691,7 @@
 
         <!-- Header with Logo -->
         <header>
+            <button class="lang-toggle" id="langToggle" aria-label="Switch to English">EN</button>
             <a href="#hero" aria-label="PWAI - Αρχική">
                 <img src="pwai.svg" alt="PWAI Logo - AI Consulting για Δικηγόρους και Επιχειρήσεις στην Ελλάδα" class="logo" width="350" height="100">
             </a>
@@ -668,8 +700,8 @@
         <!-- Hero Content -->
         <div class="hero-content">
             <div class="hero-inner">
-                <h1>Στρατηγική Υιοθέτηση AI: Από τη Θεωρία στην Πράξη</h1>
-                <p class="hero-subtitle">Υπηρετούμε τη μετάβαση στη νέα ψηφιακή πραγματικότητα.</p>
+                <h1 data-i18n="hero.title">Στρατηγική Υιοθέτηση AI: Από τη Θεωρία στην Πράξη</h1>
+                <p class="hero-subtitle" data-i18n="hero.subtitle">Υπηρετούμε τη μετάβαση στη νέα ψηφιακή πραγματικότητα.</p>
                 <a href="mailto:afroditi@pwai.gr" class="cta-btn">
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
@@ -681,7 +713,7 @@
 
         <!-- Scroll Indicator -->
         <div class="scroll-indicator" aria-hidden="true">
-            <span>Μάθετε περισσότερα</span>
+            <span data-i18n="hero.scroll">Μάθετε περισσότερα</span>
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
             </svg>
@@ -700,10 +732,10 @@
 
     <!-- Internal Navigation -->
     <nav class="internal-nav" aria-label="Πλοήγηση σελίδας">
-        <a href="#ai-dikigorous">AI για Δικηγόρους</a>
-        <a href="#eu-ai-act">EU AI Act</a>
-        <a href="#ypiresies">Υπηρεσίες</a>
-        <a href="#faq">Συχνές Ερωτήσεις</a>
+        <a href="#ai-dikigorous" data-i18n="nav.lawyers">AI για Δικηγόρους</a>
+        <a href="#eu-ai-act" data-i18n="nav.euact">EU AI Act</a>
+        <a href="#ypiresies" data-i18n="nav.services">Υπηρεσίες</a>
+        <a href="#faq" data-i18n="nav.faq">Συχνές Ερωτήσεις</a>
     </nav>
 
     <!-- Main Content - SEO Sections -->
@@ -711,108 +743,108 @@
         <!-- Section 1: AI για Δικηγόρους στην Ελλάδα -->
         <section class="seo-section" id="ai-dikigorous">
             <div class="section-divider"></div>
-            <h2>AI για Δικηγόρους στην Ελλάδα: Ο Μετασχηματισμός του Νομικού Κλάδου</h2>
+            <h2 data-i18n="section1.title">AI για Δικηγόρους στην Ελλάδα: Ο Μετασχηματισμός του Νομικού Κλάδου</h2>
             
-            <p>Η τεχνητή νοημοσύνη αλλάζει ριζικά τον τρόπο λειτουργίας των δικηγορικών γραφείων παγκοσμίως, και η Ελλάδα δεν αποτελεί εξαίρεση. Τα σύγχρονα εργαλεία AI επιτρέπουν στους δικηγόρους να αυτοματοποιήσουν χρονοβόρες διαδικασίες, να βελτιώσουν την ακρίβεια της έρευνάς τους και να προσφέρουν καλύτερες υπηρεσίες στους πελάτες τους.</p>
+            <p data-i18n="section1.intro">Η τεχνητή νοημοσύνη αλλάζει ριζικά τον τρόπο λειτουργίας των δικηγορικών γραφείων παγκοσμίως, και η Ελλάδα δεν αποτελεί εξαίρεση. Τα σύγχρονα εργαλεία AI επιτρέπουν στους δικηγόρους να αυτοματοποιήσουν χρονοβόρες διαδικασίες, να βελτιώσουν την ακρίβεια της έρευνάς τους και να προσφέρουν καλύτερες υπηρεσίες στους πελάτες τους.</p>
 
-            <h3>Αυτοματοποίηση Νομικής Έρευνας</h3>
-            <p>Η νομική έρευνα αποτελεί θεμελιώδη δραστηριότητα κάθε δικηγορικού γραφείου. Με τη χρήση AI, η αναζήτηση νομολογίας, νομοθεσίας και νομικών άρθρων γίνεται σε κλάσματα του χρόνου που απαιτούσε παραδοσιακά. Τα συστήματα τεχνητής νοημοσύνης μπορούν να αναλύσουν χιλιάδες έγγραφα και να εντοπίσουν τις πιο σχετικές πληροφορίες για κάθε υπόθεση.</p>
+            <h3 data-i18n="section1.research.title">Αυτοματοποίηση Νομικής Έρευνας</h3>
+            <p data-i18n="section1.research.text">Η νομική έρευνα αποτελεί θεμελιώδη δραστηριότητα κάθε δικηγορικού γραφείου. Με τη χρήση AI, η αναζήτηση νομολογίας, νομοθεσίας και νομικών άρθρων γίνεται σε κλάσματα του χρόνου που απαιτούσε παραδοσιακά. Τα συστήματα τεχνητής νοημοσύνης μπορούν να αναλύσουν χιλιάδες έγγραφα και να εντοπίσουν τις πιο σχετικές πληροφορίες για κάθε υπόθεση.</p>
 
-            <h3>Σύνταξη Νομικών Εγγράφων</h3>
-            <p>Η AI μπορεί να βοηθήσει στη σύνταξη συμβολαίων, δικογράφων και άλλων νομικών εγγράφων. Χρησιμοποιώντας προηγμένα γλωσσικά μοντέλα, τα εργαλεία AI δημιουργούν προσχέδια που οι δικηγόροι μπορούν να επεξεργαστούν και να προσαρμόσουν, εξοικονομώντας πολύτιμο χρόνο.</p>
+            <h3 data-i18n="section1.drafting.title">Σύνταξη Νομικών Εγγράφων</h3>
+            <p data-i18n="section1.drafting.text">Η AI μπορεί να βοηθήσει στη σύνταξη συμβολαίων, δικογράφων και άλλων νομικών εγγράφων. Χρησιμοποιώντας προηγμένα γλωσσικά μοντέλα, τα εργαλεία AI δημιουργούν προσχέδια που οι δικηγόροι μπορούν να επεξεργαστούν και να προσαρμόσουν, εξοικονομώντας πολύτιμο χρόνο.</p>
 
-            <h3>Ανάλυση Συμβολαίων και Due Diligence</h3>
-            <p>Η ανάλυση συμβολαίων με AI επιτρέπει τον εντοπισμό κινδύνων, ασυνεπειών και προβληματικών όρων σε ελάχιστο χρόνο. Αυτό είναι ιδιαίτερα χρήσιμο σε διαδικασίες due diligence, όπου πρέπει να εξεταστούν μεγάλοι όγκοι εγγράφων.</p>
+            <h3 data-i18n="section1.analysis.title">Ανάλυση Συμβολαίων και Due Diligence</h3>
+            <p data-i18n="section1.analysis.text">Η ανάλυση συμβολαίων με AI επιτρέπει τον εντοπισμό κινδύνων, ασυνεπειών και προβληματικών όρων σε ελάχιστο χρόνο. Αυτό είναι ιδιαίτερα χρήσιμο σε διαδικασίες due diligence, όπου πρέπει να εξεταστούν μεγάλοι όγκοι εγγράφων.</p>
 
-            <h3>Συμμόρφωση και Κανονιστικό Πλαίσιο</h3>
-            <p>Τα δικηγορικά γραφεία που υιοθετούν AI πρέπει να διασφαλίζουν τη συμμόρφωση με τον GDPR, το επαγγελματικό απόρρητο και τις δεοντολογικές υποχρεώσεις του κλάδου. Η <a href="#ypiresies" class="anchor-link">PWAI</a> εξειδικεύεται στην υλοποίηση λύσεων που σέβονται αυτές τις απαιτήσεις.</p>
+            <h3 data-i18n="section1.compliance.title">Συμμόρφωση και Κανονιστικό Πλαίσιο</h3>
+            <p data-i18n="section1.compliance.text">Τα δικηγορικά γραφεία που υιοθετούν AI πρέπει να διασφαλίζουν τη συμμόρφωση με τον GDPR, το επαγγελματικό απόρρητο και τις δεοντολογικές υποχρεώσεις του κλάδου. Η <a href="#ypiresies" class="anchor-link">PWAI</a> εξειδικεύεται στην υλοποίηση λύσεων που σέβονται αυτές τις απαιτήσεις.</p>
         </section>
 
         <!-- Section 2: EU AI Act Συμμόρφωση -->
         <section class="seo-section" id="eu-ai-act">
             <div class="section-divider"></div>
-            <h2>Συμμόρφωση με το EU AI Act: Προετοιμάστε την Επιχείρησή σας</h2>
+            <h2 data-i18n="section2.title">Συμμόρφωση με το EU AI Act: Προετοιμάστε την Επιχείρησή σας</h2>
             
-            <p>Ο Ευρωπαϊκός Κανονισμός για την Τεχνητή Νοημοσύνη (EU AI Act) αποτελεί το πρώτο ολοκληρωμένο νομικό πλαίσιο για την AI παγκοσμίως. Οι ελληνικές επιχειρήσεις και δικηγορικά γραφεία πρέπει να προετοιμαστούν για τις νέες υποχρεώσεις που επιβάλλει.</p>
+            <p data-i18n="section2.intro">Ο Ευρωπαϊκός Κανονισμός για την Τεχνητή Νοημοσύνη (EU AI Act) αποτελεί το πρώτο ολοκληρωμένο νομικό πλαίσιο για την AI παγκοσμίως. Οι ελληνικές επιχειρήσεις και δικηγορικά γραφεία πρέπει να προετοιμαστούν για τις νέες υποχρεώσεις που επιβάλλει.</p>
 
-            <h3>Τι Προβλέπει ο Κανονισμός</h3>
-            <p>Ο EU AI Act κατηγοριοποιεί τα συστήματα AI ανάλογα με τον κίνδυνο που ενέχουν. Τα συστήματα υψηλού κινδύνου, που περιλαμβάνουν εφαρμογές στη δικαιοσύνη και τη διοίκηση, υπόκεινται σε αυστηρές απαιτήσεις διαφάνειας, ακρίβειας και ανθρώπινης επίβλεψης.</p>
+            <h3 data-i18n="section2.provisions.title">Τι Προβλέπει ο Κανονισμός</h3>
+            <p data-i18n="section2.provisions.text">Ο EU AI Act κατηγοριοποιεί τα συστήματα AI ανάλογα με τον κίνδυνο που ενέχουν. Τα συστήματα υψηλού κινδύνου, που περιλαμβάνουν εφαρμογές στη δικαιοσύνη και τη διοίκηση, υπόκεινται σε αυστηρές απαιτήσεις διαφάνειας, ακρίβειας και ανθρώπινης επίβλεψης.</p>
 
-            <h3>Υποχρεώσεις για Επιχειρήσεις</h3>
+            <h3 data-i18n="section2.obligations.title">Υποχρεώσεις για Επιχειρήσεις</h3>
             <ul>
-                <li>Αξιολόγηση κινδύνου για κάθε σύστημα AI που χρησιμοποιείται</li>
-                <li>Τεκμηρίωση και διαφάνεια στη λειτουργία των AI συστημάτων</li>
-                <li>Διασφάλιση ανθρώπινης επίβλεψης σε κρίσιμες αποφάσεις</li>
-                <li>Τήρηση αρχείων και δυνατότητα ελέγχου</li>
-                <li>Εκπαίδευση προσωπικού στη χρήση AI</li>
+                <li data-i18n="section2.obligations.item1">Αξιολόγηση κινδύνου για κάθε σύστημα AI που χρησιμοποιείται</li>
+                <li data-i18n="section2.obligations.item2">Τεκμηρίωση και διαφάνεια στη λειτουργία των AI συστημάτων</li>
+                <li data-i18n="section2.obligations.item3">Διασφάλιση ανθρώπινης επίβλεψης σε κρίσιμες αποφάσεις</li>
+                <li data-i18n="section2.obligations.item4">Τήρηση αρχείων και δυνατότητα ελέγχου</li>
+                <li data-i18n="section2.obligations.item5">Εκπαίδευση προσωπικού στη χρήση AI</li>
             </ul>
 
-            <h3>Η PWAI ως Συνεργάτης Συμμόρφωσης</h3>
-            <p>Η PWAI προσφέρει εξειδικευμένες υπηρεσίες για τη συμμόρφωση με το EU AI Act. Από την αξιολόγηση των υφιστάμενων συστημάτων μέχρι την υλοποίηση νέων λύσεων που πληρούν τις απαιτήσεις του κανονισμού, είμαστε δίπλα σας σε κάθε βήμα.</p>
+            <h3 data-i18n="section2.partner.title">Η PWAI ως Συνεργάτης Συμμόρφωσης</h3>
+            <p data-i18n="section2.partner.text">Η PWAI προσφέρει εξειδικευμένες υπηρεσίες για τη συμμόρφωση με το EU AI Act. Από την αξιολόγηση των υφιστάμενων συστημάτων μέχρι την υλοποίηση νέων λύσεων που πληρούν τις απαιτήσεις του κανονισμού, είμαστε δίπλα σας σε κάθε βήμα.</p>
         </section>
 
         <!-- Section 3: Υπηρεσίες AI Consulting -->
         <section class="seo-section" id="ypiresies">
             <div class="section-divider"></div>
-            <h2>Υπηρεσίες AI Consulting για Επιχειρήσεις</h2>
+            <h2 data-i18n="section3.title">Υπηρεσίες AI Consulting για Επιχειρήσεις</h2>
             
-            <p>Η PWAI προσφέρει ολοκληρωμένες υπηρεσίες AI consulting, σχεδιασμένες για τις ανάγκες των ελληνικών επιχειρήσεων και δικηγορικών γραφείων. Η προσέγγισή μας είναι πρακτική και προσανατολισμένη στα αποτελέσματα.</p>
+            <p data-i18n="section3.intro">Η PWAI προσφέρει ολοκληρωμένες υπηρεσίες AI consulting, σχεδιασμένες για τις ανάγκες των ελληνικών επιχειρήσεων και δικηγορικών γραφείων. Η προσέγγισή μας είναι πρακτική και προσανατολισμένη στα αποτελέσματα.</p>
 
-            <h3>Στρατηγική AI & Αξιολόγηση</h3>
+            <h3 data-i18n="section3.strategy.title">Στρατηγική AI & Αξιολόγηση</h3>
             <ul>
-                <li>Ανάλυση επιχειρηματικών διαδικασιών και εντοπισμός ευκαιριών AI</li>
-                <li>Αξιολόγηση ετοιμότητας οργανισμού για υιοθέτηση AI</li>
-                <li>Σχεδιασμός roadmap υλοποίησης με μετρήσιμους στόχους</li>
-                <li>Ανάλυση κόστους-οφέλους και υπολογισμός ROI</li>
+                <li data-i18n="section3.strategy.item1">Ανάλυση επιχειρηματικών διαδικασιών και εντοπισμός ευκαιριών AI</li>
+                <li data-i18n="section3.strategy.item2">Αξιολόγηση ετοιμότητας οργανισμού για υιοθέτηση AI</li>
+                <li data-i18n="section3.strategy.item3">Σχεδιασμός roadmap υλοποίησης με μετρήσιμους στόχους</li>
+                <li data-i18n="section3.strategy.item4">Ανάλυση κόστους-οφέλους και υπολογισμός ROI</li>
             </ul>
 
-            <h3>Υλοποίηση & Ενσωμάτωση</h3>
+            <h3 data-i18n="section3.implementation.title">Υλοποίηση & Ενσωμάτωση</h3>
             <ul>
-                <li>Επιλογή και παραμετροποίηση AI εργαλείων</li>
-                <li>Ενσωμάτωση με υφιστάμενα συστήματα και workflows</li>
-                <li>Ανάπτυξη custom AI λύσεων για εξειδικευμένες ανάγκες</li>
-                <li>Δοκιμές και βελτιστοποίηση απόδοσης</li>
+                <li data-i18n="section3.implementation.item1">Επιλογή και παραμετροποίηση AI εργαλείων</li>
+                <li data-i18n="section3.implementation.item2">Ενσωμάτωση με υφιστάμενα συστήματα και workflows</li>
+                <li data-i18n="section3.implementation.item3">Ανάπτυξη custom AI λύσεων για εξειδικευμένες ανάγκες</li>
+                <li data-i18n="section3.implementation.item4">Δοκιμές και βελτιστοποίηση απόδοσης</li>
             </ul>
 
-            <h3>Εκπαίδευση & Υποστήριξη</h3>
+            <h3 data-i18n="section3.training.title">Εκπαίδευση & Υποστήριξη</h3>
             <ul>
-                <li>Εκπαιδευτικά προγράμματα για στελέχη και προσωπικό</li>
-                <li>Workshops πρακτικής εφαρμογής AI εργαλείων</li>
-                <li>Συνεχής τεχνική υποστήριξη και συμβουλευτική</li>
-                <li>Παρακολούθηση απόδοσης και προτάσεις βελτίωσης</li>
+                <li data-i18n="section3.training.item1">Εκπαιδευτικά προγράμματα για στελέχη και προσωπικό</li>
+                <li data-i18n="section3.training.item2">Workshops πρακτικής εφαρμογής AI εργαλείων</li>
+                <li data-i18n="section3.training.item3">Συνεχής τεχνική υποστήριξη και συμβουλευτική</li>
+                <li data-i18n="section3.training.item4">Παρακολούθηση απόδοσης και προτάσεις βελτίωσης</li>
             </ul>
 
-            <p>Για περισσότερες πληροφορίες σχετικά με τις υπηρεσίες μας, <a href="mailto:afroditi@pwai.gr" class="anchor-link">επικοινωνήστε μαζί μας</a>.</p>
+            <p data-i18n="section3.contact">Για περισσότερες πληροφορίες σχετικά με τις υπηρεσίες μας, <a href="mailto:afroditi@pwai.gr" class="anchor-link">επικοινωνήστε μαζί μας</a>.</p>
         </section>
 
         <!-- Section 4: FAQ -->
         <section class="seo-section" id="faq">
             <div class="section-divider"></div>
-            <h2>Συχνές Ερωτήσεις για την AI σε Δικηγορικά Γραφεία και Επιχειρήσεις</h2>
+            <h2 data-i18n="section4.title">Συχνές Ερωτήσεις για την AI σε Δικηγορικά Γραφεία και Επιχειρήσεις</h2>
             
             <div class="faq-item">
-                <h3 class="faq-question">Πώς μπορεί η τεχνητή νοημοσύνη να βοηθήσει ένα δικηγορικό γραφείο;</h3>
-                <p class="faq-answer">Η AI μπορεί να αυτοματοποιήσει τη νομική έρευνα, τη σύνταξη εγγράφων, την ανάλυση συμβολαίων και τη διαχείριση υποθέσεων. Εξοικονομεί χρόνο, μειώνει τα λάθη και επιτρέπει στους δικηγόρους να επικεντρωθούν σε στρατηγικές εργασίες υψηλής αξίας. Τα σύγχρονα εργαλεία AI μπορούν να αναλύσουν χιλιάδες σελίδες νομολογίας σε λεπτά, κάτι που θα απαιτούσε ώρες ή ημέρες με παραδοσιακές μεθόδους.</p>
+                <h3 class="faq-question" data-i18n="section4.faq1.q">Πώς μπορεί η τεχνητή νοημοσύνη να βοηθήσει ένα δικηγορικό γραφείο;</h3>
+                <p class="faq-answer" data-i18n="section4.faq1.a">Η AI μπορεί να αυτοματοποιήσει τη νομική έρευνα, τη σύνταξη εγγράφων, την ανάλυση συμβολαίων και τη διαχείριση υποθέσεων. Εξοικονομεί χρόνο, μειώνει τα λάθη και επιτρέπει στους δικηγόρους να επικεντρωθούν σε στρατηγικές εργασίες υψηλής αξίας. Τα σύγχρονα εργαλεία AI μπορούν να αναλύσουν χιλιάδες σελίδες νομολογίας σε λεπτά, κάτι που θα απαιτούσε ώρες ή ημέρες με παραδοσιακές μεθόδους.</p>
             </div>
 
             <div class="faq-item">
-                <h3 class="faq-question">Τι είναι το EU AI Act και πώς επηρεάζει τις ελληνικές επιχειρήσεις;</h3>
-                <p class="faq-answer">Το EU AI Act είναι ο νέος ευρωπαϊκός κανονισμός για την τεχνητή νοημοσύνη που τέθηκε σε ισχύ το 2024. Θέτει κανόνες για την ανάπτυξη και χρήση AI συστημάτων, με ιδιαίτερη έμφαση στα συστήματα υψηλού κινδύνου. Οι ελληνικές επιχειρήσεις που χρησιμοποιούν ή αναπτύσσουν AI πρέπει να προετοιμαστούν για συμμόρφωση με τις νέες απαιτήσεις διαφάνειας, ασφάλειας και ανθρώπινης επίβλεψης.</p>
+                <h3 class="faq-question" data-i18n="section4.faq2.q">Τι είναι το EU AI Act και πώς επηρεάζει τις ελληνικές επιχειρήσεις;</h3>
+                <p class="faq-answer" data-i18n="section4.faq2.a">Το EU AI Act είναι ο νέος ευρωπαϊκός κανονισμός για την τεχνητή νοημοσύνη που τέθηκε σε ισχύ το 2024. Θέτει κανόνες για την ανάπτυξη και χρήση AI συστημάτων, με ιδιαίτερη έμφαση στα συστήματα υψηλού κινδύνου. Οι ελληνικές επιχειρήσεις που χρησιμοποιούν ή αναπτύσσουν AI πρέπει να προετοιμαστούν για συμμόρφωση με τις νέες απαιτήσεις διαφάνειας, ασφάλειας και ανθρώπινης επίβλεψης.</p>
             </div>
 
             <div class="faq-item">
-                <h3 class="faq-question">Ποιες υπηρεσίες AI consulting προσφέρει η PWAI;</h3>
-                <p class="faq-answer">Η PWAI προσφέρει στρατηγική υλοποίηση AI, αυτοματοποίηση επιχειρηματικών διαδικασιών, συμμόρφωση με το EU AI Act, εκπαίδευση προσωπικού και ανάπτυξη custom AI λύσεων. Εξειδικευόμαστε σε δικηγορικά γραφεία και επιχειρήσεις που θέλουν να αξιοποιήσουν την AI με υπεύθυνο και αποτελεσματικό τρόπο.</p>
+                <h3 class="faq-question" data-i18n="section4.faq3.q">Ποιες υπηρεσίες AI consulting προσφέρει η PWAI;</h3>
+                <p class="faq-answer" data-i18n="section4.faq3.a">Η PWAI προσφέρει στρατηγική υλοποίηση AI, αυτοματοποίηση επιχειρηματικών διαδικασιών, συμμόρφωση με το EU AI Act, εκπαίδευση προσωπικού και ανάπτυξη custom AI λύσεων. Εξειδικευόμαστε σε δικηγορικά γραφεία και επιχειρήσεις που θέλουν να αξιοποιήσουν την AI με υπεύθυνο και αποτελεσματικό τρόπο.</p>
             </div>
 
             <div class="faq-item">
-                <h3 class="faq-question">Είναι ασφαλής η χρήση AI σε δικηγορικά γραφεία;</h3>
-                <p class="faq-answer">Ναι, με τη σωστή υλοποίηση. Η PWAI εξασφαλίζει ότι όλες οι AI λύσεις συμμορφώνονται με τον GDPR, το επαγγελματικό απόρρητο και τις απαιτήσεις ασφαλείας δεδομένων που απαιτούνται για νομικές υπηρεσίες. Χρησιμοποιούμε τεχνολογίες κρυπτογράφησης, ελέγχου πρόσβασης και audit trails για τη μέγιστη προστασία των ευαίσθητων δεδομένων.</p>
+                <h3 class="faq-question" data-i18n="section4.faq4.q">Είναι ασφαλής η χρήση AI σε δικηγορικά γραφεία;</h3>
+                <p class="faq-answer" data-i18n="section4.faq4.a">Ναι, με τη σωστή υλοποίηση. Η PWAI εξασφαλίζει ότι όλες οι AI λύσεις συμμορφώνονται με τον GDPR, το επαγγελματικό απόρρητο και τις απαιτήσεις ασφαλείας δεδομένων που απαιτούνται για νομικές υπηρεσίες. Χρησιμοποιούμε τεχνολογίες κρυπτογράφησης, ελέγχου πρόσβασης και audit trails για τη μέγιστη προστασία των ευαίσθητων δεδομένων.</p>
             </div>
 
             <div class="faq-item">
-                <h3 class="faq-question">Πόσο κοστίζει η υλοποίηση AI σε μια επιχείρηση;</h3>
-                <p class="faq-answer">Το κόστος εξαρτάται από το μέγεθος της επιχείρησης, τις συγκεκριμένες ανάγκες και το εύρος της υλοποίησης. Η PWAI προσφέρει εξατομικευμένες λύσεις με μετρήσιμο ROI. Ξεκινάμε με μια δωρεάν αξιολόγηση των αναγκών σας και παρουσιάζουμε αναλυτική πρόταση με κόστος και αναμενόμενα οφέλη. Επικοινωνήστε μαζί μας στο <a href="mailto:afroditi@pwai.gr" class="anchor-link">afroditi@pwai.gr</a>.</p>
+                <h3 class="faq-question" data-i18n="section4.faq5.q">Πόσο κοστίζει η υλοποίηση AI σε μια επιχείρηση;</h3>
+                <p class="faq-answer" data-i18n="section4.faq5.a">Το κόστος εξαρτάται από το μέγεθος της επιχείρησης, τις συγκεκριμένες ανάγκες και το εύρος της υλοποίησης. Η PWAI προσφέρει εξατομικευμένες λύσεις με μετρήσιμο ROI. Ξεκινάμε με μια δωρεάν αξιολόγηση των αναγκών σας και παρουσιάζουμε αναλυτική πρόταση με κόστος και αναμενόμενα οφέλη. Επικοινωνήστε μαζί μας στο <a href="mailto:afroditi@pwai.gr" class="anchor-link">afroditi@pwai.gr</a>.</p>
             </div>
         </section>
     </main>
@@ -821,9 +853,9 @@
     <footer>
         <div class="footer-content">
             <img src="pwai.svg" alt="PWAI Logo" class="footer-logo" width="120" height="34" loading="lazy">
-            <p class="footer-text">Στρατηγική Υλοποίηση Τεχνητής Νοημοσύνης<br>για Δικηγόρους και Επιχειρήσεις στην Ελλάδα</p>
+            <p class="footer-text" data-i18n="footer.text">Στρατηγική Υλοποίηση Τεχνητής Νοημοσύνης<br>για Δικηγόρους και Επιχειρήσεις στην Ελλάδα</p>
             <a href="mailto:afroditi@pwai.gr" class="footer-email">afroditi@pwai.gr</a>
-            <p class="footer-copyright">© 2024 PWAI.gr - Με επιφύλαξη παντός δικαιώματος | <a href="privacy.html" style="color: inherit; text-decoration: underline;">Πολιτική Απορρήτου</a></p>
+            <p class="footer-copyright" data-i18n="footer.copyright">© 2024 PWAI.gr - Με επιφύλαξη παντός δικαιώματος | <a href="privacy.html" style="color: inherit; text-decoration: underline;">Πολιτική Απορρήτου</a></p>
         </div>
     </footer>
 
@@ -904,6 +936,134 @@
                 lazyImages.forEach(function(img) {
                     imageObserver.observe(img);
                 });
+            }
+        })();
+
+        // Language Toggle Functionality
+        (function() {
+            'use strict';
+            
+            const translations = {
+                en: {
+                    'hero.title': 'Strategic AI Adoption: From Theory to Practice',
+                    'hero.subtitle': 'We serve the transition to the new digital reality.',
+                    'hero.scroll': 'Learn more',
+                    'nav.lawyers': 'AI for Lawyers',
+                    'nav.euact': 'EU AI Act',
+                    'nav.services': 'Services',
+                    'nav.faq': 'FAQ',
+                    'section1.title': 'AI for Lawyers in Greece: Transforming the Legal Sector',
+                    'section1.intro': 'Artificial intelligence is fundamentally changing how law firms operate worldwide, and Greece is no exception. Modern AI tools enable lawyers to automate time-consuming processes, improve research accuracy, and deliver better services to their clients.',
+                    'section1.research.title': 'Legal Research Automation',
+                    'section1.research.text': 'Legal research is a fundamental activity for every law firm. With AI, searching case law, legislation, and legal articles takes a fraction of the time it traditionally required. AI systems can analyze thousands of documents and identify the most relevant information for each case.',
+                    'section1.drafting.title': 'Legal Document Drafting',
+                    'section1.drafting.text': 'AI can assist in drafting contracts, pleadings, and other legal documents. Using advanced language models, AI tools create drafts that lawyers can edit and customize, saving valuable time.',
+                    'section1.analysis.title': 'Contract Analysis and Due Diligence',
+                    'section1.analysis.text': 'AI-powered contract analysis enables the identification of risks, inconsistencies, and problematic terms in minimal time. This is particularly useful in due diligence processes, where large volumes of documents need to be reviewed.',
+                    'section1.compliance.title': 'Compliance and Regulatory Framework',
+                    'section1.compliance.text': 'Law firms adopting AI must ensure compliance with GDPR, professional confidentiality, and the ethical obligations of the profession. <a href="#ypiresies" class="anchor-link">PWAI</a> specializes in implementing solutions that respect these requirements.',
+                    'section2.title': 'EU AI Act Compliance: Prepare Your Business',
+                    'section2.intro': 'The European Regulation on Artificial Intelligence (EU AI Act) is the first comprehensive legal framework for AI worldwide. Greek businesses and law firms must prepare for the new obligations it imposes.',
+                    'section2.provisions.title': 'What the Regulation Provides',
+                    'section2.provisions.text': 'The EU AI Act categorizes AI systems according to the risk they pose. High-risk systems, which include applications in justice and administration, are subject to strict requirements for transparency, accuracy, and human oversight.',
+                    'section2.obligations.title': 'Obligations for Businesses',
+                    'section2.obligations.item1': 'Risk assessment for each AI system used',
+                    'section2.obligations.item2': 'Documentation and transparency in AI system operations',
+                    'section2.obligations.item3': 'Ensuring human oversight in critical decisions',
+                    'section2.obligations.item4': 'Record keeping and audit capability',
+                    'section2.obligations.item5': 'Staff training in AI use',
+                    'section2.partner.title': 'PWAI as Your Compliance Partner',
+                    'section2.partner.text': 'PWAI offers specialized services for EU AI Act compliance. From assessing existing systems to implementing new solutions that meet regulatory requirements, we are by your side every step of the way.',
+                    'section3.title': 'AI Consulting Services for Businesses',
+                    'section3.intro': 'PWAI offers comprehensive AI consulting services, designed for the needs of Greek businesses and law firms. Our approach is practical and results-oriented.',
+                    'section3.strategy.title': 'AI Strategy & Assessment',
+                    'section3.strategy.item1': 'Business process analysis and AI opportunity identification',
+                    'section3.strategy.item2': 'Organization readiness assessment for AI adoption',
+                    'section3.strategy.item3': 'Implementation roadmap design with measurable goals',
+                    'section3.strategy.item4': 'Cost-benefit analysis and ROI calculation',
+                    'section3.implementation.title': 'Implementation & Integration',
+                    'section3.implementation.item1': 'AI tool selection and configuration',
+                    'section3.implementation.item2': 'Integration with existing systems and workflows',
+                    'section3.implementation.item3': 'Custom AI solution development for specialized needs',
+                    'section3.implementation.item4': 'Testing and performance optimization',
+                    'section3.training.title': 'Training & Support',
+                    'section3.training.item1': 'Training programs for executives and staff',
+                    'section3.training.item2': 'Practical AI tool application workshops',
+                    'section3.training.item3': 'Ongoing technical support and consulting',
+                    'section3.training.item4': 'Performance monitoring and improvement recommendations',
+                    'section3.contact': 'For more information about our services, <a href="mailto:afroditi@pwai.gr" class="anchor-link">contact us</a>.',
+                    'section4.title': 'Frequently Asked Questions about AI in Law Firms and Businesses',
+                    'section4.faq1.q': 'How can artificial intelligence help a law firm?',
+                    'section4.faq1.a': 'AI can automate legal research, document drafting, contract analysis, and case management. It saves time, reduces errors, and allows lawyers to focus on high-value strategic work. Modern AI tools can analyze thousands of pages of case law in minutes, something that would take hours or days with traditional methods.',
+                    'section4.faq2.q': 'What is the EU AI Act and how does it affect Greek businesses?',
+                    'section4.faq2.a': 'The EU AI Act is the new European regulation on artificial intelligence that came into force in 2024. It sets rules for the development and use of AI systems, with particular emphasis on high-risk systems. Greek businesses that use or develop AI must prepare for compliance with new transparency, security, and human oversight requirements.',
+                    'section4.faq3.q': 'What AI consulting services does PWAI offer?',
+                    'section4.faq3.a': 'PWAI offers strategic AI implementation, business process automation, EU AI Act compliance, staff training, and custom AI solution development. We specialize in law firms and businesses that want to leverage AI responsibly and effectively.',
+                    'section4.faq4.q': 'Is AI use safe in law firms?',
+                    'section4.faq4.a': 'Yes, with proper implementation. PWAI ensures that all AI solutions comply with GDPR, professional confidentiality, and data security requirements needed for legal services. We use encryption technologies, access control, and audit trails for maximum protection of sensitive data.',
+                    'section4.faq5.q': 'How much does AI implementation cost for a business?',
+                    'section4.faq5.a': 'The cost depends on the size of the business, specific needs, and scope of implementation. PWAI offers customized solutions with measurable ROI. We start with a free assessment of your needs and present a detailed proposal with costs and expected benefits. Contact us at <a href="mailto:afroditi@pwai.gr" class="anchor-link">afroditi@pwai.gr</a>.',
+                    'footer.text': 'Strategic AI Implementation<br>for Lawyers and Businesses in Greece',
+                    'footer.copyright': '© 2024 PWAI.gr - All rights reserved | <a href="privacy.html" style="color: inherit; text-decoration: underline;">Privacy Policy</a>'
+                }
+            };
+            
+            // Store original Greek texts
+            const originalTexts = {};
+            
+            function initLanguageToggle() {
+                const langToggle = document.getElementById('langToggle');
+                if (!langToggle) return;
+                
+                // Store original texts on first load
+                document.querySelectorAll('[data-i18n]').forEach(function(el) {
+                    const key = el.getAttribute('data-i18n');
+                    originalTexts[key] = el.innerHTML;
+                });
+                
+                // Check localStorage for saved language preference
+                const savedLang = localStorage.getItem('pwai-lang');
+                if (savedLang === 'en') {
+                    applyLanguage('en');
+                    langToggle.textContent = 'EL';
+                    langToggle.setAttribute('aria-label', 'Switch to Greek');
+                    document.documentElement.lang = 'en';
+                }
+                
+                langToggle.addEventListener('click', function() {
+                    const currentLang = langToggle.textContent;
+                    if (currentLang === 'EN') {
+                        applyLanguage('en');
+                        langToggle.textContent = 'EL';
+                        langToggle.setAttribute('aria-label', 'Switch to Greek');
+                        localStorage.setItem('pwai-lang', 'en');
+                        document.documentElement.lang = 'en';
+                    } else {
+                        applyLanguage('el');
+                        langToggle.textContent = 'EN';
+                        langToggle.setAttribute('aria-label', 'Switch to English');
+                        localStorage.setItem('pwai-lang', 'el');
+                        document.documentElement.lang = 'el';
+                    }
+                });
+            }
+            
+            function applyLanguage(lang) {
+                document.querySelectorAll('[data-i18n]').forEach(function(el) {
+                    const key = el.getAttribute('data-i18n');
+                    if (lang === 'en' && translations.en[key]) {
+                        el.innerHTML = translations.en[key];
+                    } else if (lang === 'el' && originalTexts[key]) {
+                        el.innerHTML = originalTexts[key];
+                    }
+                });
+            }
+            
+            // Initialize when DOM is ready
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initLanguageToggle);
+            } else {
+                initLanguageToggle();
             }
         })();
     </script>
