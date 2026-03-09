@@ -505,6 +505,111 @@
             color: #114A9F;
         }
 
+        /* Products Section */
+        .products-section {
+            padding: 4rem 1.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .products-section h2 {
+            font-size: clamp(1.5rem, 4vw, 2.25rem);
+            font-weight: 600;
+            color: #114A9F;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.01em;
+            line-height: 1.3;
+        }
+
+        .products-section > p {
+            font-size: clamp(0.95rem, 2vw, 1.1rem);
+            color: rgba(17, 73, 158, 0.78);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .products-grid {
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            }
+        }
+
+        .product-card {
+            background: #DBEDFF;
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(67, 186, 223, 0.2);
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(17, 74, 159, 0.12);
+        }
+
+        .product-logo {
+            max-width: 280px;
+            width: 100%;
+            height: auto;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-card h3 {
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            font-weight: 600;
+            color: #114A9F;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-tagline {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #43BADF;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .product-description {
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            color: rgba(17, 73, 158, 0.75);
+            line-height: 1.7;
+        }
+
+        .product-badge {
+            display: inline-block;
+            margin-top: 1.25rem;
+            padding: 0.4rem 1rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #E8513A;
+            background: rgba(232, 81, 58, 0.1);
+            border: 1px solid rgba(232, 81, 58, 0.25);
+            border-radius: 20px;
+            letter-spacing: 0.03em;
+        }
+
+        @media (min-width: 768px) {
+            .products-section {
+                padding: 5rem 2rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .products-section {
+                padding: 6rem 2rem;
+            }
+        }
+
         /* FAQ Section */
         .faq-item {
             border-bottom: 1px solid rgba(17, 74, 159, 0.1);
@@ -813,6 +918,7 @@
         <a href="#eu-ai-act" data-i18n="nav.euact">EU AI Act</a>
         <a href="#ypiresies" data-i18n="nav.services">Υπηρεσίες</a>
         <a href="#giati-pwai" data-i18n="nav.whypwai">Γιατί PWAI</a>
+        <a href="#proionta" data-i18n="nav.products">Προϊόντα</a>
         <a href="#faq" data-i18n="nav.faq">Συχνές Ερωτήσεις</a>
     </nav>
 
@@ -946,7 +1052,24 @@
             <p data-i18n="section4.adaptation.text">Κάθε επιχείρηση έχει διαφορετικό επίπεδο ωριμότητας, διαφορετικούς στόχους και διαφορετικές αντοχές σε αλλαγές. Για αυτό δεν ακολουθούμε τυποποιημένη λογική, αλλά προσαρμόζουμε τη στρατηγική και τα εργαλεία στο πραγματικό σας περιβάλλον.</p>
         </section>
 
-        <!-- Section 5: FAQ -->
+        <!-- Section 5: Products -->
+        <section class="products-section" id="proionta">
+            <div class="section-divider"></div>
+            <h2 data-i18n="products.title">Τα Προϊόντα μας</h2>
+            <p data-i18n="products.intro">Αναπτύσσουμε εξειδικευμένες λύσεις τεχνητής νοημοσύνης για συγκεκριμένους κλάδους της ελληνικής αγοράς, κάνοντας την καθημερινότητα των επιχειρήσεων πιο εύκολη και αποδοτική.</p>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="myhotelai.webp" alt="MyHotelAI.gr - Smart AI for Greek Hotels" class="product-logo" width="280" height="80" loading="lazy">
+                    <h3 data-i18n="products.myhotelai.name">MyHotelAI.gr</h3>
+                    <p class="product-tagline" data-i18n="products.myhotelai.tagline">Smart AI for Greek Hotels</p>
+                    <p class="product-description" data-i18n="products.myhotelai.description">Μια ολοκληρωμένη πλατφόρμα τεχνητής νοημοσύνης σχεδιασμένη ειδικά για ξενοδοχεία στην Ελλάδα. Αυτοματοποιεί καθημερινές λειτουργίες, βελτιώνει την εμπειρία των επισκεπτών και απλοποιεί τη διαχείριση, ώστε οι ξενοδόχοι να εστιάζουν σε αυτό που κάνουν καλύτερα: τη φιλοξενία.</p>
+                    <span class="product-badge" data-i18n="products.myhotelai.badge">Σύντομα διαθέσιμο</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: FAQ -->
         <section class="seo-section" id="faq">
             <div class="section-divider"></div>
             <h2 data-i18n="section5.title">Συχνές Ερωτήσεις</h2>
@@ -1105,6 +1228,7 @@
                     'nav.euact': 'EU AI Act',
                     'nav.services': 'Services',
                     'nav.whypwai': 'Why PWAI',
+                    'nav.products': 'Products',
                     'nav.faq': 'FAQ',
                     'intro.text1': 'Artificial intelligence is already changing the way businesses, professional teams and organizations operate. From automating repetitive tasks to faster information processing and improved decision-making, modern AI tools can create substantial business value.',
                     'intro.text2': 'PWAI helps businesses in Greece leverage artificial intelligence in a practical way: not as a theoretical trend, but as a tool for productivity, organization, control and growth.',
@@ -1195,6 +1319,12 @@
                     'section5.faq6.a': 'The cost depends on the organization\'s maturity level, process complexity, the tools selected and the scope of support. The right approach starts with a needs assessment and clear goal setting, so that the investment is controlled and measurable.',
                     'section5.faq7.q': 'Is the use of AI tools safe?',
                     'section5.faq7.a': 'It can be, provided there is proper tool selection, a clear usage framework, human oversight, documentation and compliance with data protection and internal control requirements.',
+                    'products.title': 'Our Products',
+                    'products.intro': 'We develop specialized artificial intelligence solutions for specific sectors of the Greek market, making the daily operations of businesses easier and more efficient.',
+                    'products.myhotelai.name': 'MyHotelAI.gr',
+                    'products.myhotelai.tagline': 'Smart AI for Greek Hotels',
+                    'products.myhotelai.description': 'A comprehensive artificial intelligence platform designed specifically for hotels in Greece. It automates daily operations, improves the guest experience and simplifies management, so hoteliers can focus on what they do best: hospitality.',
+                    'products.myhotelai.badge': 'Coming soon',
                     'cta.title': 'Leverage AI in a practical, safe and organized way',
                     'cta.text': 'PWAI helps businesses and organizations move from fragmented experimentation to a serious and functional strategy for leveraging artificial intelligence.',
                     'cta.action': 'Contact us to discuss your organization\'s needs and plan the next steps.',
