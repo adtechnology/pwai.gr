@@ -156,16 +156,6 @@
     </script>
     
     <style>
-        /* ============================================
-           PWAI v2 - Bright Greece Color Palette
-           
-           Greece-1: #43BADF (Sky Blue - Primary accent)
-           Greece-2: #DBEDFF (Light Blue - Subtle backgrounds)
-           Greece-3: #FFFDFF (Near White - Main background)
-           Greece-4: #E8513A (Coral Red - CTA / emphasis)
-           Greece-5: #114A9F (Deep Blue - Headings / footer)
-           ============================================ */
-
         /* Reset & Base - Mobile First */
         *, *::before, *::after {
             margin: 0;
@@ -182,8 +172,8 @@
             font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', sans-serif;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-            background: #FFFDFF;
-            color: #114A9F;
+            background: #0a0a0a;
+            color: #ffffff;
             line-height: 1.6;
         }
 
@@ -218,14 +208,14 @@
             backface-visibility: hidden;
         }
 
-        /* Overlay with Blue Tint */
+        /* Dark Overlay with Blur */
         .overlay {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(180deg, rgba(17, 74, 159, 0.45) 0%, rgba(67, 186, 223, 0.30) 100%);
+            background: rgba(0, 0, 0, 0.55);
             backdrop-filter: blur(4px);
             -webkit-backdrop-filter: blur(4px);
             z-index: -1;
@@ -254,8 +244,8 @@
             font-weight: 600;
             color: #ffffff;
             text-decoration: none;
-            background: rgba(255, 255, 255, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
             border-radius: 50%;
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
@@ -264,8 +254,8 @@
         }
 
         .lang-toggle:hover {
-            background: rgba(255, 255, 255, 0.3);
-            border-color: rgba(255, 255, 255, 0.6);
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
             transform: scale(1.05);
         }
 
@@ -308,20 +298,20 @@
             line-height: 1.2;
             margin-bottom: 1.5rem;
             letter-spacing: -0.02em;
-            text-shadow: 0 2px 20px rgba(17, 74, 159, 0.4);
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
         }
 
         .hero-subtitle {
             font-size: clamp(1rem, 2.5vw, 1.35rem);
             font-weight: 300;
-            color: rgba(255, 255, 255, 0.9);
+            color: rgba(255, 255, 255, 0.85);
             line-height: 1.6;
             max-width: 600px;
             margin: 0 auto 2rem;
             letter-spacing: 0.01em;
         }
 
-        /* CTA Button - Coral Red */
+        /* CTA Button */
         .cta-btn {
             display: inline-flex;
             align-items: center;
@@ -332,18 +322,19 @@
             font-weight: 500;
             color: #ffffff;
             text-decoration: none;
-            background: #E8513A;
-            border: 2px solid #E8513A;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
             border-radius: 50px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(232, 81, 58, 0.3);
         }
 
         .cta-btn:hover {
-            background: #d4432e;
-            border-color: #d4432e;
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(232, 81, 58, 0.4);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
         .cta-btn:active {
@@ -366,7 +357,7 @@
             flex-direction: column;
             align-items: center;
             gap: 0.5rem;
-            color: rgba(255, 255, 255, 0.8);
+            color: rgba(255, 255, 255, 0.6);
             font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 0.1em;
@@ -393,9 +384,9 @@
             right: 2rem;
             width: 48px;
             height: 48px;
-            border: 1px solid rgba(17, 74, 159, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
             border-radius: 50%;
-            background: rgba(255, 253, 255, 0.85);
+            background: rgba(0, 0, 0, 0.4);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             cursor: pointer;
@@ -404,19 +395,18 @@
             justify-content: center;
             transition: all 0.3s ease;
             z-index: 100;
-            box-shadow: 0 2px 10px rgba(17, 74, 159, 0.1);
         }
 
         .sound-toggle:hover {
-            background: rgba(219, 237, 255, 0.95);
-            border-color: rgba(67, 186, 223, 0.5);
+            background: rgba(0, 0, 0, 0.6);
+            border-color: rgba(255, 255, 255, 0.5);
             transform: scale(1.05);
         }
 
         .sound-toggle svg {
             width: 22px;
             height: 22px;
-            fill: #114A9F;
+            fill: rgba(255, 255, 255, 0.9);
         }
 
         .sound-toggle .icon-unmute { display: block; }
@@ -426,7 +416,7 @@
 
         /* Main Content - SEO Sections */
         main {
-            background: linear-gradient(180deg, #FFFDFF 0%, #DBEDFF 100%);
+            background: linear-gradient(180deg, #0a0a0a 0%, #111111 100%);
         }
 
         /* Section Base Styles */
@@ -439,7 +429,7 @@
         .seo-section h2 {
             font-size: clamp(1.5rem, 4vw, 2.25rem);
             font-weight: 600;
-            color: #114A9F;
+            color: #ffffff;
             margin-bottom: 1.5rem;
             letter-spacing: -0.01em;
             line-height: 1.3;
@@ -448,14 +438,14 @@
         .seo-section h3 {
             font-size: clamp(1.1rem, 3vw, 1.5rem);
             font-weight: 500;
-            color: #114A9F;
+            color: rgba(255, 255, 255, 0.95);
             margin: 2rem 0 1rem;
             line-height: 1.4;
         }
 
         .seo-section p {
             font-size: clamp(0.95rem, 2vw, 1.1rem);
-            color: rgba(17, 73, 158, 0.78);
+            color: rgba(255, 255, 255, 0.75);
             line-height: 1.8;
             margin-bottom: 1.25rem;
         }
@@ -469,7 +459,7 @@
             position: relative;
             padding-left: 1.5rem;
             margin-bottom: 0.75rem;
-            color: rgba(17, 73, 158, 0.75);
+            color: rgba(255, 255, 255, 0.75);
             font-size: clamp(0.95rem, 2vw, 1.05rem);
             line-height: 1.6;
         }
@@ -481,7 +471,7 @@
             top: 0.6em;
             width: 6px;
             height: 6px;
-            background: #43BADF;
+            background: rgba(255, 255, 255, 0.4);
             border-radius: 50%;
         }
 
@@ -489,25 +479,25 @@
         .section-divider {
             width: 60px;
             height: 2px;
-            background: linear-gradient(90deg, #43BADF, #DBEDFF);
+            background: linear-gradient(90deg, rgba(255,255,255,0.3), rgba(255,255,255,0.1));
             margin: 0 0 2rem;
         }
 
         /* Anchor Links */
         .anchor-link {
-            color: #43BADF;
+            color: rgba(255, 255, 255, 0.9);
             text-decoration: underline;
             text-underline-offset: 3px;
             transition: color 0.2s ease;
         }
 
         .anchor-link:hover {
-            color: #114A9F;
+            color: #ffffff;
         }
 
         /* FAQ Section */
         .faq-item {
-            border-bottom: 1px solid rgba(17, 74, 159, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             padding: 1.5rem 0;
         }
 
@@ -518,14 +508,14 @@
         .faq-question {
             font-size: clamp(1rem, 2.5vw, 1.15rem);
             font-weight: 500;
-            color: #114A9F;
+            color: rgba(255, 255, 255, 0.95);
             margin-bottom: 0.75rem;
             line-height: 1.5;
         }
 
         .faq-answer {
             font-size: clamp(0.9rem, 2vw, 1rem);
-            color: rgba(17, 73, 158, 0.7);
+            color: rgba(255, 255, 255, 0.7);
             line-height: 1.7;
         }
 
@@ -540,7 +530,7 @@
         .cta-section h2 {
             font-size: clamp(1.5rem, 4vw, 2.25rem);
             font-weight: 600;
-            color: #114A9F;
+            color: #ffffff;
             margin-bottom: 1.5rem;
             letter-spacing: -0.01em;
             line-height: 1.3;
@@ -548,7 +538,7 @@
 
         .cta-section p {
             font-size: clamp(0.95rem, 2vw, 1.1rem);
-            color: rgba(17, 73, 158, 0.75);
+            color: rgba(255, 255, 255, 0.75);
             line-height: 1.8;
             margin-bottom: 1.25rem;
             max-width: 700px;
@@ -560,9 +550,9 @@
             margin-top: 1rem;
         }
 
-        /* Footer - Deep Blue */
+        /* Footer */
         footer {
-            background: #114A9F;
+            background: #050505;
             padding: 3rem 1.5rem;
             text-align: center;
         }
@@ -576,18 +566,17 @@
             width: 120px;
             height: auto;
             margin-bottom: 1.5rem;
-            opacity: 0.9;
-            filter: brightness(0) invert(1);
+            opacity: 0.8;
         }
 
         .footer-text {
             font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.7);
+            color: rgba(255, 255, 255, 0.5);
             margin-bottom: 1rem;
         }
 
         .footer-email {
-            color: #43BADF;
+            color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
             font-size: 1rem;
             transition: color 0.2s ease;
@@ -600,16 +589,7 @@
         .footer-copyright {
             margin-top: 2rem;
             font-size: 0.8rem;
-            color: rgba(255, 255, 255, 0.5);
-        }
-
-        .footer-copyright a {
-            color: rgba(255, 255, 255, 0.5);
-            text-decoration: underline;
-        }
-
-        .footer-copyright a:hover {
-            color: rgba(255, 255, 255, 0.8);
+            color: rgba(255, 255, 255, 0.3);
         }
 
         /* Internal Navigation */
@@ -619,13 +599,13 @@
             gap: 1rem;
             justify-content: center;
             padding: 2rem 1.5rem;
-            background: #DBEDFF;
-            border-top: 1px solid rgba(67, 186, 223, 0.2);
-            border-bottom: 1px solid rgba(67, 186, 223, 0.2);
+            background: rgba(255, 255, 255, 0.02);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .internal-nav a {
-            color: #114A9F;
+            color: rgba(255, 255, 255, 0.6);
             text-decoration: none;
             font-size: 0.9rem;
             padding: 0.5rem 1rem;
@@ -635,7 +615,7 @@
 
         .internal-nav a:hover {
             color: #ffffff;
-            background: #43BADF;
+            background: rgba(255, 255, 255, 0.1);
         }
 
         /* Responsive Adjustments */
@@ -734,7 +714,7 @@
             
             body {
                 background: white;
-                color: #114A9F;
+                color: black;
             }
             
             .seo-section p,
@@ -763,7 +743,7 @@
             </video>
         </div>
 
-        <!-- Overlay -->
+        <!-- Dark Overlay -->
         <div class="overlay"></div>
 
         <!-- Header with Logo -->

@@ -16,16 +16,6 @@
     <link rel="icon" type="image/svg+xml" href="pwai.svg">
     
     <style>
-        /* ============================================
-           PWAI v2 Privacy - Bright Greece Color Palette
-           
-           Greece-1: #43BADF (Sky Blue - Primary accent)
-           Greece-2: #DBEDFF (Light Blue - Subtle backgrounds)
-           Greece-3: #FFFDFF (Near White - Main background)
-           Greece-4: #E8513A (Coral Red - CTA / emphasis)
-           Greece-5: #114A9F (Deep Blue - Headings / footer)
-           ============================================ */
-
         /* Reset & Base */
         *, *::before, *::after {
             margin: 0;
@@ -42,8 +32,8 @@
             font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', sans-serif;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-            background: #FFFDFF;
-            color: #114A9F;
+            background: #0a0a0a;
+            color: #ffffff;
             line-height: 1.6;
         }
 
@@ -73,18 +63,18 @@
             font-family: inherit;
             font-size: 0.85rem;
             font-weight: 600;
-            color: #114A9F;
+            color: #ffffff;
             text-decoration: none;
-            background: rgba(67, 186, 223, 0.1);
-            border: 1px solid rgba(67, 186, 223, 0.3);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
             border-radius: 50%;
             cursor: pointer;
             transition: all 0.3s ease;
         }
 
         .lang-toggle:hover {
-            background: rgba(67, 186, 223, 0.2);
-            border-color: #43BADF;
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
             transform: scale(1.05);
         }
 
@@ -97,7 +87,6 @@
             height: auto;
             opacity: 0.95;
             transition: opacity 0.3s ease;
-            filter: brightness(0) saturate(100%) invert(22%) sepia(90%) saturate(1500%) hue-rotate(205deg) brightness(85%) contrast(95%);
         }
 
         .logo:hover {
@@ -105,19 +94,19 @@
         }
 
         .back-link {
-            color: #114A9F;
+            color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
             font-size: 0.9rem;
             padding: 0.5rem 1rem;
-            border: 1px solid rgba(17, 74, 159, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 20px;
             transition: all 0.2s ease;
         }
 
         .back-link:hover {
             color: #ffffff;
-            border-color: #43BADF;
-            background: #43BADF;
+            border-color: rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 0.05);
         }
 
         /* Main Content */
@@ -130,21 +119,21 @@
         h1 {
             font-size: clamp(1.75rem, 4vw, 2.5rem);
             font-weight: 600;
-            color: #114A9F;
+            color: #ffffff;
             margin-bottom: 0.5rem;
             letter-spacing: -0.02em;
         }
 
         .last-updated {
             font-size: 0.9rem;
-            color: rgba(17, 73, 158, 0.5);
+            color: rgba(255, 255, 255, 0.5);
             margin-bottom: 3rem;
         }
 
         h2 {
             font-size: clamp(1.25rem, 3vw, 1.5rem);
             font-weight: 600;
-            color: #114A9F;
+            color: #ffffff;
             margin: 2.5rem 0 1rem;
             letter-spacing: -0.01em;
         }
@@ -152,13 +141,13 @@
         h3 {
             font-size: clamp(1.1rem, 2.5vw, 1.25rem);
             font-weight: 500;
-            color: #114A9F;
+            color: rgba(255, 255, 255, 0.95);
             margin: 2rem 0 0.75rem;
         }
 
         p {
             font-size: clamp(0.95rem, 2vw, 1.05rem);
-            color: rgba(17, 73, 158, 0.75);
+            color: rgba(255, 255, 255, 0.75);
             line-height: 1.8;
             margin-bottom: 1rem;
         }
@@ -172,7 +161,7 @@
             position: relative;
             padding-left: 1.5rem;
             margin-bottom: 0.5rem;
-            color: rgba(17, 73, 158, 0.75);
+            color: rgba(255, 255, 255, 0.75);
             font-size: clamp(0.95rem, 2vw, 1.05rem);
             line-height: 1.6;
         }
@@ -184,32 +173,32 @@
             top: 0.6em;
             width: 6px;
             height: 6px;
-            background: #43BADF;
+            background: rgba(255, 255, 255, 0.4);
             border-radius: 50%;
         }
 
         a {
-            color: #43BADF;
+            color: rgba(255, 255, 255, 0.9);
             text-decoration: underline;
             text-underline-offset: 3px;
             transition: color 0.2s ease;
         }
 
         a:hover {
-            color: #114A9F;
+            color: #ffffff;
         }
 
         .section-divider {
             width: 60px;
             height: 2px;
-            background: linear-gradient(90deg, #43BADF, #DBEDFF);
+            background: linear-gradient(90deg, rgba(255,255,255,0.3), rgba(255,255,255,0.1));
             margin: 3rem 0;
         }
 
         /* Contact Box */
         .contact-box {
-            background: #DBEDFF;
-            border: 1px solid rgba(67, 186, 223, 0.2);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 12px;
             padding: 1.5rem;
             margin: 2rem 0;
@@ -225,7 +214,7 @@
 
         /* Footer */
         footer {
-            background: #114A9F;
+            background: #050505;
             padding: 2rem 1.5rem;
             text-align: center;
         }
@@ -237,15 +226,11 @@
 
         .footer-text {
             font-size: 0.85rem;
-            color: rgba(255, 255, 255, 0.6);
+            color: rgba(255, 255, 255, 0.4);
         }
 
         .footer-text a {
-            color: #43BADF;
-        }
-
-        .footer-text a:hover {
-            color: #ffffff;
+            color: rgba(255, 255, 255, 0.6);
         }
 
         /* Responsive */
@@ -263,7 +248,7 @@
         @media print {
             body {
                 background: white;
-                color: #114A9F;
+                color: black;
             }
 
             p, li {
